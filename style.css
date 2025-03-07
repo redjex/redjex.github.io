@@ -2,14 +2,14 @@ body {
     margin: 0;
     background: #fdfdfd;
     overflow: hidden;
-    perspective: 1000px;
+    perspective: 333px;
 
     font-family: 'Caveat', cursive;
 }
 
 .dot {
-    width: 35px;
-    height: 35px;
+    width: 11.67px;
+    height: 11.67px;
     position: absolute;
     background: url('img/petal.png');
     background-size: 100% 100%;
@@ -26,9 +26,9 @@ html, body {
 }
 
 .card {
-    width: 800px;
-    height: 420px;
-    padding: 15px 30px;
+    width: 266.67px;
+    height: 140px;
+    padding: 5px 10px;
 
     position: absolute;
     top: 50%;
@@ -36,37 +36,37 @@ html, body {
     z-index: 1;
 
     transform-style: preserve-3d;
-    perspective: 200px;
+    perspective: 66.67px;
     opacity: 0;
     background-color: #fff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 6.67px rgba(0, 0, 0, .1);
 
-    transform: translate3d(-40%, -50%, 0) rotateY(30deg);
+    transform: translate3d(-13.33%, -50%, 0) rotateY(30deg);
     animation: card 2s linear 2s forwards;
 }
 
 .title {
-    margin-bottom: 10px;
+    margin-bottom: 3.33px;
 
     background-image: linear-gradient(110deg, #ff6945 0%, #8047ca 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
     color: #ff6945;
-    font-size: 80px;
+    font-size: 26.67px;
     line-height: 1;
 }
 
 .text {
-    margin-bottom: 20px;
-    padding-bottom: 5px;
+    margin-bottom: 6.67px;
+    padding-bottom: 1.67px;
 
     background-image: linear-gradient(110deg, #333 0%, #ccc 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
     color: #333;
-    font-size: 35px;
+    font-size: 11.67px;
     line-height: 1.2;
 }
 
@@ -78,7 +78,7 @@ html, body {
     opacity: 0;
 
     color: #121212;
-    font-size: 30px;
+    font-size: 10px;
     text-align: right;
 
     transition: opacity 1s linear;
@@ -92,4 +92,3 @@ html, body {
         opacity: 1;
     }
 }
-
