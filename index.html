@@ -63,10 +63,13 @@
       opacity: 1;
       transition: opacity 1s ease;
     }
+    .authorText {
+      transition: opacity 1s ease; /* Плавное изменение прозрачности */
+    }
   </style>
 </head>
 <body>
-
+    <p id="authorText" class="authorText" style="position: absolute; top: 300px; left: 50%; transform: translateX(-50%); color: white; font-size: 10px;">Сделано @redjex</p>
   <button class="btn" id="openBtn">Открыть</button>
   <canvas id="canvas"></canvas>
   <div class="text" id="text"></div>
@@ -208,50 +211,45 @@
     };
     
     // Обработчик нажатия на кнопку
-    const openBtn = document.getElementById('openBtn');
-    openBtn.addEventListener('click', function() {
-      // Плавное затемнение кнопки
-      openBtn.classList.add('fade-out');
-      setTimeout(() => {
-        openBtn.style.display = 'none';
+const openBtn = document.getElementById('openBtn');
+const authorText = document.getElementById('authorText'); // Получаем элемент "Сделано @redjex"
+
+    openBtn.addEventListener('click', function () {
+    // Плавное затемнение кнопки
+    openBtn.classList.add('fade-out');
+    authorText.classList.add('fade-out'); // Добавляем эффект исчезновения для текста "Сделано @redjex"
+
+    setTimeout(() => {
+        openBtn.style.display = 'none'; // Скрываем кнопку после анимации
+        authorText.style.display = 'none'; // Скрываем текст "Сделано @redjex" после анимации
+
         // Плавное появление canvas (сердца)
         c.style.opacity = 1;
         c.classList.add('fade-in');
         loop(); // запуск анимации сердца
-        
+
         // Через 10 секунд сердце начинает исчезать
         setTimeout(() => {
-          c.classList.remove('fade-in');
-          c.classList.add('fade-out');
-          // Ждём завершения перехода (1 секунда)
-          setTimeout(() => {
+        c.classList.remove('fade-in');
+        c.classList.add('fade-out');
+        // Ждём завершения перехода (1 секунда)
+        setTimeout(() => {
             c.style.display = 'none';
             cancelAnimationFrame(animationFrameId);
+
             // Плавное появление текста на черном фоне
             const textDiv = document.getElementById('text');
             textDiv.style.display = 'block';
-            // Принудительный reflow для запуска transition
-            void textDiv.offsetWidth;
+            void textDiv.offsetWidth; // Принудительный reflow для запуска transition
             textDiv.classList.add('fade-in');
             startTextAnimation();
-          }, 1000);
+        }, 1000);
         }, 10000);
-      }, 1000);
+    }, 1000);
     });
     
     // Анимация текста (по 7 букв в секунду)
-    const textContent = `Моя любимая Соня,
-    
-В этот День святого Валентина хочу признаться, как сильно ты для меня значишь. Твоя нежность, доброта и красота заставляют меня чувствовать себя самым счастливым человеком на земле.
-
-Пусть наша любовь только крепнет с каждым днём. Я безумно тебя люблю.
-    
-С нежностью и преданностью,
-redjex
-      
-      
-      
-      <3`;
+    const textContent = `Лера поздравляю с 8 марта желаю тебе хорошего настроения и чтоб ты всегда была радостная.`;
     
     let index = 0;
     function startTextAnimation() {
