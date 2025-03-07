@@ -63,13 +63,9 @@
       opacity: 1;
       transition: opacity 1s ease;
     }
-    .authorText {
-      transition: opacity 1s ease; /* Плавное изменение прозрачности */
-    }
   </style>
 </head>
 <body>
-    <p id="authorText" class="authorText" style="position: absolute; top: 40%; left: 50%; transform: translateX(-50%); color: white; font-size: 10px;">Сделано @redjex</p>
   <button class="btn" id="openBtn">Открыть</button>
   <canvas id="canvas"></canvas>
   <div class="text" id="text"></div>
@@ -212,16 +208,13 @@
     
     // Обработчик нажатия на кнопку
 const openBtn = document.getElementById('openBtn');
-const authorText = document.getElementById('authorText'); // Получаем элемент "Сделано @redjex"
 
     openBtn.addEventListener('click', function () {
     // Плавное затемнение кнопки
     openBtn.classList.add('fade-out');
-    authorText.classList.add('fade-out'); // Добавляем эффект исчезновения для текста "Сделано @redjex"
 
     setTimeout(() => {
         openBtn.style.display = 'none'; // Скрываем кнопку после анимации
-        authorText.style.display = 'none'; // Скрываем текст "Сделано @redjex" после анимации
 
         // Плавное появление canvas (сердца)
         c.style.opacity = 1;
