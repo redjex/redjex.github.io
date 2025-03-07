@@ -26,7 +26,8 @@ html, body {
 }
 
 .card {
-    width: 266.67px;
+    width: 80%;
+    max-width: 266.67px;
     height: 140px;
     padding: 5px 10px;
 
@@ -41,7 +42,7 @@ html, body {
     background-color: #fff;
     box-shadow: 0 0 6.67px rgba(0, 0, 0, .1);
 
-    transform: translate3d(-13.33%, -50%, 0) rotateY(30deg);
+    transform: translate3d(-50%, -50%, 0) rotateY(30deg);
     animation: card 2s linear 2s forwards;
 }
 
@@ -82,6 +83,14 @@ html, body {
     text-align: right;
 
     transition: opacity 1s linear;
+}
+
+@media (max-width: 375px) {
+    .card {
+        width: calc(100% - 40px);
+        height: 120px;
+        padding: 5px 10px;
+    }
 }
 
 @keyframes card {
