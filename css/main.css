@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  overflow: hidden; /* Убираем полосу прокрутки на всем сайте */
 }
 
 .navbar {
@@ -277,7 +278,7 @@ h1 {
   z-index: -1;
 }
 .contact img{
-  width: 1400px; /* Уменьшено для лучшей пропорции */
+  width: 1300px; /* Уменьшено для лучшей пропорции */
   height: auto; /* Сохранение пропорций */
   border-radius: 15px; /* Добавлено скругление *//* Блочный элемент */
   position: absolute; /* Абсолютное позиционирование */
