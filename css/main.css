@@ -1,0 +1,323 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #3333337c;
+  padding: 15px 0;
+  position: fixed;
+  top: 15px;
+  height: 20px;
+  border-radius: 20px;
+  left: 50px;
+  right: 50px;
+
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end; /* Выравнивание содержимого справа */
+  
+}
+
+.navbar li {
+  margin-right: 20px;
+
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 30px;
+  padding: 5px 20px; /* Увеличен горизонтальный паддинг */
+  margin: -21px -5px; /* Отступы сверху/снизу */
+  display: flex;
+  align-items: center; /* Выравнивание текста по центру */
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Анимация при наведении */
+.navbar a:hover {
+  color: #333;
+  background: white;
+  
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  padding-top: 100px; /* Отступ от верхнего меню */
+}
+
+.content {
+  text-align: center;
+  padding-top: 200px; /* Центрирование по вертикали */
+}
+
+.redjex {
+  color: rgb(255, 255, 255);
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 8em;
+  text-align: center;
+  margin: 400px auto 0px auto;
+  padding: 0;
+  animation: fade 1s ease-in-out;
+}
+.anim-text {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 17px;
+  margin: 20px 0;
+  white-space: nowrap;
+  font-weight: bold;
+  position: absolute;
+  top: 51.5%; /* Верхняя граница */
+  left: 50%; /* Левая граница */
+  transform: translate(-50%, 150%); /* Сдвиг элемента */
+  
+
+}
+
+/* Мигающий курсор (опционально) */
+.anim-text::after {
+  content: '_';
+  opacity: 1;
+  animation: cursor 1s infinite;
+}
+
+@keyframes cursor {
+  50% { opacity: 0; }
+}
+.ava {
+  width: 400px; /* Уменьшено для лучшей пропорции */
+  height: auto; /* Сохранение пропорций */
+  border-radius: 15px; /* Добавлено скругление */
+  display: block; /* Блочный элемент */
+  position: absolute; /* Абсолютное позиционирование */
+  top: 50%; /* Верхняя граница */
+  left: 50%; /* Левая граница */
+  transform: translate(-160%, -50%); /* Сдвиг элемента */
+  z-index: -1; /* Нижний слой */
+  animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+
+
+}
+
+.you_died {
+  width: 300px; /* Уменьшено для лучшей пропорции */
+  height: auto; /* Сохранение пропорций */
+  border-radius: 15px; /* Добавлено скругление */
+  display: block; /* Блочный элемент */
+  position: absolute; /* Абсолютное позиционирование */
+  top: 50%; /* Верхняя граница */
+  left: 50%; /* Левая граница */
+  transform: translate(40%, -70%) rotate(32deg); /* Сдвиг элемента */
+  z-index: -1; /* Нижний слой */
+  animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+
+
+}
+
+.section {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 12px;
+  max-width: 600px;
+}
+
+/* Стили кнопки назад */
+.back-btn {
+  position: absolute;
+  top: 18px;
+  left: 50px;
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #ffffff;
+  padding: 10px 15px;
+  transition: color 0.3s;
+  z-index: 1000;
+  
+}
+
+.back-btn:hover {
+  color: #929292;
+}
+
+/* Стили иконки */
+.back-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 35
+}
+.project{
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 550px;
+  left: calc(50vw - 225px);
+}
+.project p{
+  top: -400px;
+  position: relative;
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  text-align: center;
+  font-size: 6em;
+}
+.pricing{
+  display: none;
+  width: 400px; /* Уменьшено для лучшей пропорции */
+  height: auto; /* Сохранение пропорций */
+  border-radius: 15px; /* Добавлено скругление *//* Блочный элемент */
+  position: absolute; /* Абсолютное позиционирование */
+  top: 50%; /* Верхняя граница */
+  left: 50%; /* Левая граница */
+  transform: translate(-50%, -50%); /* Сдвиг */
+  border: #000000;
+  z-index: -1;
+}
+.pricing img{
+  width: 1000px; /* Уменьшено для лучшей пропорции */
+  height: auto; /* Сохранение пропорций */
+  border-radius: 15px; /* Добавлено скругление *//* Блочный элемент */
+  position: absolute; /* Абсолютное позиционирование */
+  transform: translate(-30%, -50%); /* Сдвиг */
+  z-index: -1;  
+}
+.pricing button{
+  width: 100px; /* Уменьшено для лучшей пропорции */
+  height: 25px; /* Сохранение пропорций */
+  border-radius: 15px; /* Добавлено скругление *//* Блочный элемент */
+  border: 1px solid #ffffff;
+  background-color: #fdfdfd00;
+  color: #ffffff;
+  position: absolute; /* Абсолютное позиционирование */
+  top: 10%; /* Верхняя граница */
+  left: -4%; /* Левая граница */
+  transform: translate(-50%, 700%); /* Сдвиг */
+  z-index: -1
+}
+.rewards{
+  display: none;
+  width: 400px; /* Уменьшено для лучшей пропорции */
+  height: auto; /* Сохранение пропорций */
+  border-radius: 15px; /* Добавлено скругление *//* Блочный элемент */
+  position: absolute; /* Абсолютное позиционирование */
+  top: 50%; /* Верхняя граница */
+  left: 50%; /* Левая граница */
+  transform: translate(-50%, -50%); /* Сдвиг */
+  border: #000000;
+  z-index: -1;
+}
+.rewards img{
+  width: 1000px; /* Уменьшено для лучшей пропорции */
+  height: auto; /* Сохранение пропорций */
+  border-radius: 15px; /* Добавлено скругление *//* Блочный элемент */
+  position: absolute; /* Абсолютное позиционирование */
+  transform: translate(-30%, -50%); /* Сдвиг */
+  z-index: -1;  
+}
+.contact{
+  display: none;
+  width: 400px; /* Уменьшено для лучшей пропорции */
+  height: auto; /* Сохранение пропорций */
+  border-radius: 15px; /* Добавлено скругление *//* Блочный элемент */
+  position: absolute; /* Абсолютное позиционирование */
+  top: 50%; /* Верхняя граница */
+  left: 50%; /* Левая граница */
+  transform: translate(-50%, -50%); /* Сдвиг */
+  border: #000000;
+  z-index: -1;
+}
+.contact img{
+  width: 1400px; /* Уменьшено для лучшей пропорции */
+  height: auto; /* Сохранение пропорций */
+  border-radius: 15px; /* Добавлено скругление *//* Блочный элемент */
+  position: absolute; /* Абсолютное позиционирование */
+  transform: translate(-40%, -50%); /* Сдвиг */
+  z-index: -1;  
+}
+.aether{
+  width: 800px; /* Уменьшено для лучшей пропорции */
+  height: auto; /* Сохранение пропорций */
+  border-radius: 15px; /* Добавлено скругление *//* Блочный элемент */
+  position: absolute; /* Абсолютное позиционирование */
+  top: 70%; /* Верхняя граница */
+  left: 50%; /* Левая граница */
+  transform: translate(-50%, -93%); /* Сдвиг */
+  z-index: -1;
+}
+.redjex_contact{
+  width: 1000px; /* Уменьшено для лучшей пропорции */
+  height: auto; /* Сохранение пропорций */
+  border-radius: 15px; /* Добавлено скругление *//* Блочный элемент */
+  position: absolute; /* Абсолютное позиционирование */
+  transform: translate(25%, 29%); /* Сдвиг */
+  z-index: 1;
+  font-family: "Kodchasan", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 27px;
+}
+.dont_write_me{
+  width: 250px; /* Уменьшено для лучшей пропорции */
+  height: auto; /* Сохранение пропорций */
+  border-radius: 15px; /* Добавлено скругление *//* Блочный элемент */
+  position: absolute; /* Абсолютное позиционирование */
+  transform: translate(-117%, -30%); /* Сдвиг */
+  font-size: 48px;
+  z-index: 1;
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: bold;
+  
+}
