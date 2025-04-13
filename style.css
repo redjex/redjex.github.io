@@ -220,6 +220,14 @@ footer {
     vertical-align: middle; /* Выравнивание иконки */
 }
 
+#events img {
+    display: none;
+}
+#sights img {
+    display: none;
+
+}
+
 @media (max-width: 600px) {
     .tab-content img {
         width: 100vw;
@@ -359,5 +367,27 @@ footer {
     .download-button svg {
         vertical-align: middle; /* Выравнивание иконки */
     }
-    
+    #events img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        top: 65%; /* Помещает верхнюю границу элемента на середину высоты экрана */
+        left: 42%; /* Помещает левую границу элемента на середину ширины экрана */
+        transform: translate(-50%, -20%);
+        width: calc(100% / 2.3);
+
+        margin: 0 auto;
+    }
+
+    #sights img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        top: 65%; /* Помещает верхнюю границу элемента на середину высоты экрана */
+        left: 42%; /* Помещает левую границу элемента на середину ширины экрана */
+        transform: translate(-50%, -20%);
+        width: calc(100% / 2.3);
+
+        margin: 0 auto;
+    }
 }
