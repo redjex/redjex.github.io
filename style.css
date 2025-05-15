@@ -1,0 +1,559 @@
+body {   
+    background-color: #000000;  
+    overflow-y: auto; /* Enable scrolling */
+    height: 140vh; /* Increased height for longer page */
+    margin: 0; /* Remove default margin */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+}
+body::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, Edge */
+}
+body {
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+h1 {  
+    color: #ffffff;  
+    text-align: center;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: calc(3vh + 1vw);
+    text-transform: uppercase;
+    padding-top: 80px;
+    margin: 0;
+}  
+p {  
+    color: #ffffff;  
+    font-size: calc(0.5vh + 0.8vh);  
+    text-align: center; 
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal; 
+}
+.circle {  
+    width: 200px; 
+    height: 200px; 
+    background: #ffffff;
+    position: absolute; 
+    border-radius: 20px;
+    transform: translate(-50%, -60%);
+}
+#circle1 {
+    top: 40%; 
+    left: 25%; 
+}
+#circle2 {
+    top: 40%; 
+    left: 75%; 
+}
+button {
+    position: fixed;
+    top: 85%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px; 
+    height: 50px;
+    background: #4B69FF;
+    border-radius: 32px;
+    border: none;
+    color: #ffffff;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+button:hover {
+    cursor: pointer;
+    background: #4b69ff8a;
+}
+#add_price {
+    position: absolute;
+    top: 56%; 
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 250px; 
+    height: 60px;
+    background: #ffffff00;
+    border-radius: 32px;
+    color: #ffffff;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 0px;
+}
+input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    accent-color: white;
+}
+#total {
+    position: absolute;
+    top: 50.5%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+}
+#total_svg {
+    position: absolute;
+    top: 50.7%;
+    left: 31%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    text-align: center;
+}
+#done {
+    position: absolute;
+    top: 50.5%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+}
+.item {
+    position: absolute;
+    left: 0%;
+    width: 200px; 
+    height: 230px; 
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    background: #ffffff;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+}
+#item1 h1 {
+    transform: translate(0%, 50%);
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+}
+#item2 h1 {
+    transform: translate(0%, 50%);
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+}
+#item3 h1 {
+    transform: translate(0%, 50%);
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+}
+
+#item4 h1 {
+    transform: translate(0%, 50%);
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+}
+#item1 p {
+    transform: translate(0%, 550%);
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 8px;
+    text-align: center;
+}
+#item2 p {
+    transform: translate(0%, 550%);
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 8px;
+    text-align: center;
+}
+#item3 p {
+    transform: translate(0%, 550%);
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 8px;
+    text-align: center;
+}
+
+#item4 p {
+    transform: translate(0%, 550%);
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 8px;
+    text-align: center;
+}
+#item1 button {
+    transform: translate(-50%, -30%);
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    text-align: center;
+    background: #4f5da300;
+    border: 2px solid #ffffff;
+    z-index: 1;
+    width: 120px; 
+    height: 35px;
+}
+
+#item2 button {
+    transform: translate(-50%, -30%);
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    text-align: center;
+    background: #4f5da300;
+    border: 2px solid #ffffff;
+    z-index: 1;
+    width: 120px; 
+    height: 35px;
+}
+
+#item3 button {
+    transform: translate(-50%, -30%);
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    text-align: center;
+    background: #4f5da300;
+    border: 2px solid #ffffff;
+    z-index: 1;
+    width: 120px; 
+    height: 35px;
+}
+#item4 button {
+    transform: translate(-50%, -30%);
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    text-align: center;
+    background: #4f5da300;
+    border: 2px solid #ffffff;
+    z-index: 1;
+    width: 120px; 
+    height: 35px;
+}
+
+#item1 {
+    top: 80%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    border-radius: 20px;
+    background: #4B69FF;
+}
+#item2 {
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    border-radius: 20px;
+    background: #8847FF;
+}
+#item3 {
+    top: 80%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    border-radius: 20px;
+    background: #4B69FF;
+}
+#item4 {
+    top: 108%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    border-radius: 20px;
+    background: #8847FF;
+}
+img {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+#panel {
+    position: fixed; 
+    top: 95%;
+    left: 50%;
+    width: 102%; 
+    height: 94px;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    background: #000000;
+    border: 3px solid #ffffff;
+}
+#inventory {
+    position: absolute; 
+    top: 67%;
+    left: 15%;
+    width: 50%; 
+    height: 94px;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    background: transparent;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    text-align: center;
+}
+@media screen and (max-width: 768px) {
+    .item {
+        position: absolute;
+        left: 0%;
+        width: 200px; 
+        height: 230px; 
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        background: #ffffff;
+        font-family: "Rubik Mono One", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+        text-align: center;
+    }
+    #inventory {
+        position: absolute; 
+        width: 50%; 
+        height: 94px;
+        transform: translate(-43%, -50%);
+        color: #ffffff;
+        background: transparent;
+        font-family: "Rubik Mono One", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 15px;
+        text-align: center;
+    }
+    #item1 h1 {
+        transform: translate(0%, 50%);
+        font-family: "Rubik Mono One", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+        text-align: center;
+    }
+    #item2 h1 {
+        transform: translate(0%, 50%);
+        font-family: "Rubik Mono One", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+        text-align: center;
+    }
+    #item3 h1 {
+        transform: translate(0%, 50%);
+        font-family: "Rubik Mono One", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    #item4 h1 {
+        transform: translate(0%, 50%);
+        font-family: "Rubik Mono One", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+        text-align: center;
+    }
+    #item1 p {
+        transform: translate(0%, 550%);
+        font-family: "Rubik Mono One", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 8px;
+        text-align: center;
+    }
+    #item2 p {
+        transform: translate(0%, 550%);
+        font-family: "Rubik Mono One", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 8px;
+        text-align: center;
+    }
+    #item3 p {
+        transform: translate(0%, 550%);
+        font-family: "Rubik Mono One", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 8px;
+        text-align: center;
+    }
+    
+    #item4 p {
+        transform: translate(0%, 550%);
+        font-family: "Rubik Mono One", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 8px;
+        text-align: center;
+    }
+    #item1 button {
+        transform: translate(-50%, -30%);
+        font-family: "Rubik Mono One", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        text-align: center;
+        background: #4f5da300;
+        border: 2px solid #ffffff;
+        z-index: 1;
+        width: 120px; 
+        height: 35px;
+    }
+    
+    #item2 button {
+        transform: translate(-50%, -30%);
+        font-family: "Rubik Mono One", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        text-align: center;
+        background: #4f5da300;
+        border: 2px solid #ffffff;
+        z-index: 1;
+        width: 120px; 
+        height: 35px;
+    }
+    
+    #item3 button {
+        transform: translate(-50%, -30%);
+        font-family: "Rubik Mono One", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        text-align: center;
+        background: #4f5da300;
+        border: 2px solid #ffffff;
+        z-index: 1;
+        width: 120px; 
+        height: 35px;
+    }
+    #item4 button {
+        transform: translate(-50%, -30%);
+        font-family: "Rubik Mono One", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        text-align: center;
+        background: #4f5da300;
+        border: 2px solid #ffffff;
+        z-index: 1;
+        width: 120px; 
+        height: 35px;
+    }
+    
+    #item1 {
+        top: 80%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        border-radius: 20px;
+        background: #4B69FF;
+    }
+    #item2 {
+        top: 80%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        border-radius: 20px;
+        background: #8847FF;
+    }
+    #item3 {
+        top: 108%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        border-radius: 20px;
+        background: #4B69FF;
+    }
+    #item4 {
+        top: 108%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        border-radius: 20px;
+        background: #8847FF;
+    }
+    img {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+    }
+    button {
+        position: fixed;
+        top: 85%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 220px; 
+        height: 50px;
+        background: #4B69FF;
+        border-radius: 32px;
+        border: none;
+        color: #ffffff;
+        font-family: "Rubik Mono One", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+    }
+    button:hover {
+        cursor: pointer;
+        background: #4b69ff8a;
+    }
+    #total_svg {
+        position: absolute;
+        top: 50.7%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        font-family: "Rubik Mono One", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        text-align: center;
+    }
+    .hidden {
+        display: none;
+    }
+    
+ 
+}
