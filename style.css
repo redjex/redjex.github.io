@@ -307,10 +307,10 @@ img {
 }
 #panel {
     position: fixed; 
-    top: 95%;
+    top: 108%;
     left: 50%;
     width: 102%; 
-    height: 94px;
+    height: 300px;
     transform: translate(-50%, -50%);
     color: #ffffff;
     background: #000000;
