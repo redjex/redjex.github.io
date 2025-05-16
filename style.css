@@ -20,7 +20,7 @@ h1 {
     font-style: normal;
     font-size: calc(3vh + 1vw);
     text-transform: uppercase;
-    padding-top: 80px;
+    padding-top: 50px;
     margin: 0;
 }  
 p {  
@@ -41,20 +41,20 @@ p {
     transform: translate(-50%, -60%);
 }
 #circle1 {
-    top: 43%; 
+    top: 34%; 
     left: 25%;
-    height: 50vw; /* Масштабируется пропорционально */
+    height: 50vw; /* Scales proportionally */
     width: 40vw;
-    max-width: 200px; /* Максимальная ширина, например, 400px */
-    max-height: 250px; /* Максимальная высота, например, 500px */
+    max-width: 200px; /* Maximum width */
+    max-height: 250px; /* Maximum height */
 }
 #circle2 {
-    top: 43%; 
+    top: 34%; 
     left: 75%; 
-    height: 50vw; /* Масштабируется пропорционально */
+    height: 50vw; /* Scales proportionally */
     width: 40vw;
-    max-width: 200px; /* Максимальная ширина, например, 400px */
-    max-height: 250px; /* Максимальная высота, например, 500px */
+    max-width: 200px; /* Maximum width */
+    max-height: 250px; /* Maximum height */
 }
 button {
     position: fixed;
@@ -177,7 +177,6 @@ input {
     font-size: 20px;
     text-align: center;
 }
-
 #item4 h1 {
     transform: translate(0%, 50%);
     font-family: "Rubik Mono One", monospace;
@@ -210,7 +209,6 @@ input {
     font-size: 8px;
     text-align: center;
 }
-
 #item4 p {
     transform: translate(0%, 550%);
     font-family: "Rubik Mono One", monospace;
@@ -220,7 +218,7 @@ input {
     text-align: center;
 }
 #item1 button {
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, 0%);
     font-family: "Rubik Mono One", monospace;
     font-weight: 400;
     font-style: normal;
@@ -232,9 +230,8 @@ input {
     width: 120px; 
     height: 35px;
 }
-
 #item2 button {
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, 0%);
     font-family: "Rubik Mono One", monospace;
     font-weight: 400;
     font-style: normal;
@@ -246,9 +243,8 @@ input {
     width: 120px; 
     height: 35px;
 }
-
 #item3 button {
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, 0%);
     font-family: "Rubik Mono One", monospace;
     font-weight: 400;
     font-style: normal;
@@ -261,7 +257,7 @@ input {
     height: 35px;
 }
 #item4 button {
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, 0%);
     font-family: "Rubik Mono One", monospace;
     font-weight: 400;
     font-style: normal;
@@ -273,9 +269,8 @@ input {
     width: 120px; 
     height: 35px;
 }
-
 #item1 {
-    top: 80%;
+    top: 90%;
     left: 20%;
     transform: translate(-50%, -50%);
     color: #ffffff;
@@ -283,7 +278,7 @@ input {
     background: #4B69FF;
 }
 #item2 {
-    top: 80%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffffff;
@@ -291,7 +286,7 @@ input {
     background: #8847FF;
 }
 #item3 {
-    top: 80%;
+    top: 90%;
     left: 80%;
     transform: translate(-50%, -50%);
     color: #ffffff;
@@ -299,7 +294,7 @@ input {
     background: #4B69FF;
 }
 #item4 {
-    top: 118%;
+    top: 128%;
     left: 20%;
     transform: translate(-50%, -50%);
     color: #ffffff;
@@ -326,7 +321,7 @@ img {
 }
 #inventory {
     position: absolute; 
-    top: 67%;
+    top: 70vh;
     left: 15%;
     width: 50%; 
     height: 94px;
@@ -343,7 +338,7 @@ img {
     body {   
         background-color: #000000;  
         overflow-y: auto; /* Enable scrolling */
-        height: 220vh; /* Increased height for longer page */
+        height: 170vh; /* Increased height for longer page */
         margin: 0; /* Remove default margin */
         -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
     }
@@ -354,24 +349,69 @@ img {
         -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
         scrollbar-width: none; /* Hide scrollbar for Firefox */
     }
-    .item {
-        position: absolute;
-        left: 0%;
-        width: 200px; 
-        height: 230px; 
-        transform: translate(-50%, -50%);
-        color: #ffffff;
-        background: #ffffff;
+    h1 {  
+        color: #ffffff;  
+        text-align: center;
         font-family: "Rubik Mono One", monospace;
         font-weight: 400;
         font-style: normal;
-        font-size: 20px;
+        font-size: calc(3vh + 1vw);
+        text-transform: uppercase;
+        padding-top: 90px;
+        margin: 0;
+    }  
+    p {  
+        color: #ffffff;  
+        font-size: calc(0.5vh + 0.8vh);  
+        text-align: center; 
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal; 
+    }
+    .circle {  
+        width: 200px; 
+        height: 200px; 
+        background: #ffffff;
+        position: absolute; 
+        border-radius: 20px;
+        transform: translate(-50%, -60%);
+    }
+    #circle1 {
+        top: 45%; 
+        left: 25%;
+        height: 50vw; /* Scales proportionally */
+        width: 40vw;
+        max-width: 200px; /* Maximum width */
+        max-height: 250px; /* Maximum height */
+    }
+    #circle2 {
+        top: 45%; 
+        left: 75%; 
+        height: 50vw; /* Scales proportionally */
+        width: 40vw;
+        max-width: 200px; /* Maximum width */
+        max-height: 250px; /* Maximum height */
+    }
+    .item {
+        position: absolute;
+        left: 0%;
+        top: 60%;
+        width: 40vw; 
+        height: 55vw; 
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        font-family: "Rubik Mono One", monospace;
+        font-weight: 400;
+        font-style: normal;
         text-align: center;
+        max-width: 200px; /* Maximum width */
+        max-height: 250px; /* Maximum height */
     }
     #inventory {
         position: absolute; 
         width: 50%; 
-        height: 94px;
+        height: 34vh;
         transform: translate(-43%, 30%);
         color: #ffffff;
         background: transparent;
@@ -381,127 +421,38 @@ img {
         font-size: 15px;
         text-align: center;
     }
-    #item1 h1 {
+    #item1 h1, #item2 h1, #item3 h1, #item4 h1 {
         transform: translate(0%, 50%);
         font-family: "Rubik Mono One", monospace;
         font-weight: 400;
         font-style: normal;
-        font-size: 20px;
+        font-size: clamp(6px, 10px);
         text-align: center;
+        max-width: 100%;
     }
-    #item2 h1 {
-        transform: translate(0%, 50%);
-        font-family: "Rubik Mono One", monospace;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 20px;
-        text-align: center;
-    }
-    #item3 h1 {
-        transform: translate(0%, 50%);
-        font-family: "Rubik Mono One", monospace;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 20px;
-        text-align: center;
-    }
-    
-    #item4 h1 {
-        transform: translate(0%, 50%);
-        font-family: "Rubik Mono One", monospace;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 20px;
-        text-align: center;
-    }
-    #item1 p {
+    #item1 p, #item2 p, #item3 p, #item4 p {
         transform: translate(0%, 550%);
         font-family: "Rubik Mono One", monospace;
         font-weight: 400;
         font-style: normal;
-        font-size: 8px;
+        font-size: clamp(6px, 10px);
         text-align: center;
     }
-    #item2 p {
-        transform: translate(0%, 550%);
-        font-family: "Rubik Mono One", monospace;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 8px;
-        text-align: center;
-    }
-    #item3 p {
-        transform: translate(0%, 550%);
-        font-family: "Rubik Mono One", monospace;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 8px;
-        text-align: center;
-    }
-    
-    #item4 p {
-        transform: translate(0%, 550%);
-        font-family: "Rubik Mono One", monospace;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 8px;
-        text-align: center;
-    }
-    #item1 button {
+    #item1 button, #item2 button, #item3 button, #item4 button {
         transform: translate(-50%, -30%);
         font-family: "Rubik Mono One", monospace;
         font-weight: 400;
         font-style: normal;
-        font-size: 12px;
         text-align: center;
         background: #4f5da300;
         border: 2px solid #ffffff;
         z-index: 1;
-        width: 120px; 
-        height: 35px;
-    }
-    
-    #item2 button {
-        transform: translate(-50%, -30%);
-        font-family: "Rubik Mono One", monospace;
-        font-weight: 400;
-        font-style: normal;
+        width: 30vw; /* Scales with item size */
+        height: 8vw; /* Scales with item size */
+        max-width: 120px;
+        max-height: 35px;
         font-size: 12px;
-        text-align: center;
-        background: #4f5da300;
-        border: 2px solid #ffffff;
-        z-index: 1;
-        width: 120px; 
-        height: 35px;
     }
-    
-    #item3 button {
-        transform: translate(-50%, -30%);
-        font-family: "Rubik Mono One", monospace;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 12px;
-        text-align: center;
-        background: #4f5da300;
-        border: 2px solid #ffffff;
-        z-index: 1;
-        width: 120px; 
-        height: 35px;
-    }
-    #item4 button {
-        transform: translate(-50%, -30%);
-        font-family: "Rubik Mono One", monospace;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 12px;
-        text-align: center;
-        background: #4f5da300;
-        border: 2px solid #ffffff;
-        z-index: 1;
-        width: 120px; 
-        height: 35px;
-    }
-    
     #item1 {
         top: 100%;
         left: 25%;
@@ -519,7 +470,7 @@ img {
         background: #8847FF;
     }
     #item3 {
-        top: 148%;
+        top: 133%;
         left: 75%;
         transform: translate(-50%, -50%);
         color: #ffffff;
@@ -527,7 +478,7 @@ img {
         background: #4B69FF;
     }
     #item4 {
-        top: 148%;
+        top: 133%;
         left: 25%;
         transform: translate(-50%, -50%);
         color: #ffffff;
@@ -543,7 +494,7 @@ img {
     }
     button {
         position: fixed;
-        top: 80%; 
+        top: 85%; 
         left: 50%;
         transform: translate(-50%, -50%);
         width: 220px; 
@@ -589,7 +540,7 @@ img {
         font-family: "Rubik Mono One", monospace;
         font-weight: 400;
         font-style: normal;
-        font-size: 12px;
+        font-size: 13px;
         text-align: center;
         padding-top: 0px;
     }
@@ -627,6 +578,4 @@ img {
         font-size: 20px;
         text-align: center;
     }
-    
- 
 }
