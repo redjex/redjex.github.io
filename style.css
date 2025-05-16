@@ -41,16 +41,24 @@ p {
     transform: translate(-50%, -60%);
 }
 #circle1 {
-    top: 40%; 
-    left: 25%; 
+    top: 43%; 
+    left: 25%;
+    height: 50vw; /* Масштабируется пропорционально */
+    width: 40vw;
+    max-width: 200px; /* Максимальная ширина, например, 400px */
+    max-height: 250px; /* Максимальная высота, например, 500px */
 }
 #circle2 {
-    top: 40%; 
+    top: 43%; 
     left: 75%; 
+    height: 50vw; /* Масштабируется пропорционально */
+    width: 40vw;
+    max-width: 200px; /* Максимальная ширина, например, 400px */
+    max-height: 250px; /* Максимальная высота, например, 500px */
 }
 button {
     position: fixed;
-    top: 85%; 
+    top: 80%; 
     left: 50%;
     transform: translate(-50%, -50%);
     width: 220px; 
@@ -97,7 +105,7 @@ input {
 }
 #total {
     position: absolute;
-    top: 50.5%;
+    top: 48%;
     left: 25%;
     transform: translate(-50%, -50%);
     color: #ffffff;
@@ -109,7 +117,7 @@ input {
 }
 #total_svg {
     position: absolute;
-    top: 50.7%;
+    top: 48.3%;
     left: 31%;
     transform: translate(-50%, -50%);
     color: #ffffff;
@@ -121,7 +129,7 @@ input {
 }
 #done {
     position: absolute;
-    top: 50.5%;
+    top: 48%;
     left: 75%;
     transform: translate(-50%, -50%);
     color: #ffffff;
@@ -535,7 +543,7 @@ img {
     }
     button {
         position: fixed;
-        top: 85%; 
+        top: 80%; 
         left: 50%;
         transform: translate(-50%, -50%);
         width: 220px; 
@@ -555,7 +563,7 @@ img {
     }
     #total_svg {
         position: absolute;
-        top: 55.7%;
+        top: 64.7%;
         left: 35%;
         transform: translate(-50%, -50%);
         color: #ffffff;
@@ -587,7 +595,7 @@ img {
     }
     input {
         position: absolute;
-        top: 50%;
+        top: 110%;
         left: 50%;
         transform: translate(-50%, -50%);
         border-radius: 5px;
@@ -597,7 +605,7 @@ img {
     }
     #total {
         position: absolute;
-        top: 55.5%;
+        top: 64.5%;
         left: 25%;
         transform: translate(-50%, -50%);
         color: #ffffff;
@@ -609,7 +617,7 @@ img {
     }
     #done {
         position: absolute;
-        top: 55.5%;
+        top: 64.5%;
         left: 75%;
         transform: translate(-50%, -50%);
         color: #ffffff;
