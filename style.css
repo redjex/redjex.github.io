@@ -338,7 +338,7 @@ img {
     body {   
         background-color: #000000;  
         overflow-y: auto; /* Enable scrolling */
-        height: 170vh; /* Increased height for longer page */
+        height: 190vh; /* Increased height for longer page */
         margin: 0; /* Remove default margin */
         -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
     }
@@ -470,7 +470,7 @@ img {
         background: #8847FF;
     }
     #item3 {
-        top: 133%;
+        top: 153%;
         left: 75%;
         transform: translate(-50%, -50%);
         color: #ffffff;
@@ -478,7 +478,7 @@ img {
         background: #4B69FF;
     }
     #item4 {
-        top: 133%;
+        top: 153%;
         left: 25%;
         transform: translate(-50%, -50%);
         color: #ffffff;
