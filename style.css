@@ -1,3 +1,8 @@
+
+
+/* под телефоны миниаппка */
+
+
 body {   
     background-color: #000000;  
     overflow-y: auto; /* Enable scrolling */
@@ -20,18 +25,57 @@ h1 {
     font-style: normal;
     font-size: calc(4vh + 1vw);
     text-transform: uppercase;
-    padding-top: 100px;
+    padding-top: 50px;
     margin: 0;
 }  
 p {  
     color: #ffffff;  
-    font-size: calc(2vh + 0.8vh);  
+    font-size: calc(1.8vh + 0.8vh);  
     text-align: center; 
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal; 
 }
+hr {
+    position: fixed;
+    bottom: 100px;
+    left: 0;
+    width: 990%;
+    border: 1px solid rgb(0, 225, 255);
+    background-color: #000000;
+    margin: 0;
+    z-index: 10;
+}
+.square-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    z-index: -1;
+}
+.square {
+    width: calc(40vh + 1vh);
+    height: calc(45vh + 1vh);
+    background-color: #ffffff;
+    border-radius: 10px;
+    z-index: -1;
+}
+#panel hr{
+    position: fixed;
+    bottom: 440px;
+    left: 0;
+    width: 990%;
+    border: 1px solid rgb(51, 255, 0);
+    background-color: #000000;
+    margin: 0;
+    z-index: 10;
+}
+
+
+/* под пк миниаппка */
+
 
 @media screen and (max-width: 768px) {
     body {   
@@ -56,7 +100,7 @@ p {
         font-style: normal;
         font-size: calc(3.5vh + 1vw);
         text-transform: uppercase;
-        padding-top: 90px;
+        padding-top: 50px;
         margin: 0;
     }  
     p {  
@@ -67,5 +111,9 @@ p {
         font-optical-sizing: auto;
         font-weight: 300;
         font-style: normal; 
+    }
+    .square-container {
+        align-items: center;
+        z-index: -1;
     }
 }
