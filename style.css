@@ -42,8 +42,8 @@ p {
     z-index: -1;
 }
 .square {
-    width: calc(25vh + 1vh);
-    height: calc(30vh + 1vh);
+    width: calc(20vh + 1vh);
+    height: calc(25vh + 1vh);
     background-color: #ffffff;
     border-radius: 20px;
     z-index: -1;
@@ -105,8 +105,8 @@ p {
         z-index: -1;
     }
     .square {
-        width: calc(30vh + 1vh);
-        height: calc(35vh + 1vh);
+        width: calc(25vh + 1vh);
+        height: calc(30vh + 1vh);
         background-color: #ffffff;
         border-radius: 20px;
         z-index: -1;
