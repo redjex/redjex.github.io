@@ -2,7 +2,7 @@
 body {   
     background-color: #000000;  
     overflow-y: auto; /* Enable scrolling */
-    height: 160vh; /* Increased height for longer page */
+    height: 120vh; /* Increased height for longer page */
     margin: 0; /* Remove default margin */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
 }
@@ -58,13 +58,27 @@ p {
     z-index: 11; /* Keep above hr and other elements */
     border: 3px solid rgb(255, 255, 255);
 }
-
+.square button {
+    font-family: 'Rubik Mono One', monospace;
+    background: linear-gradient(135deg, #6588fd, #933bff);
+    color: #ffffff;
+    padding: 10px 60px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: translateY(480%) translateX(16%);
+}
 /* Desktop styles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 736px) {
     body {   
         background-color: #000000;  
         overflow-y: auto; /* Enable scrolling */
-        height: 180vh; /* Increased height for longer page */
+        height: 170vh; /* Increased height for longer page */
         margin: 0; /* Remove default margin */
         -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
     }
@@ -110,5 +124,88 @@ p {
         background-color: #ffffff;
         border-radius: 20px;
         z-index: -1;
+    }
+    .square button {
+        font-family: 'Rubik Mono One', monospace;
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
+        color: #ffffff;
+        padding: 10px 60px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transform: translateY(600%) translateX(30%);
+    }
+}
+/* Desktop styles */
+@media screen and (max-width: 568px) {
+    body {   
+        background-color: #000000;  
+        overflow-y: auto; /* Enable scrolling */
+        height: 300vh; /* Increased height for longer page */
+        margin: 0; /* Remove default margin */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+    }
+    body::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for Chrome, Safari, Edge */
+    }
+    body {
+        -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+        scrollbar-width: none; /* Hide scrollbar for Firefox */
+    }
+    h1 {  
+        color: #ffffff;  
+        text-align: center;
+        font-family: "Rubik Mono One", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: calc(3.5vh + 1vw);
+        text-transform: uppercase;
+        padding-top: 50px;
+        margin: 0;
+    }  
+    p {  
+        color: #ffffff;  
+        font-size: calc(1vh + 0.8vh);  
+        text-align: center; 
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal; 
+    }
+    .square-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        z-index: -1;
+    }
+    .square {
+        width: calc(25vh + 1vh);
+        height: calc(30vh + 1vh);
+        background-color: #ffffff;
+        border-radius: 20px;
+        z-index: -1;
+    }
+    .square button {
+        font-family: 'Rubik Mono One', monospace;
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
+        color: #ffffff;
+        padding: 10px 60px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transform: translateY(600%) translateX(30%);
     }
 }
