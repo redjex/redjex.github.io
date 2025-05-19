@@ -49,12 +49,12 @@ p {
     z-index: -1;
 }
 .panel {
-    width: 101%;
+    width: 105%;
     height: calc(20vh + 1vh);
     background-color: #000000;
     position: fixed; /* Use fixed positioning to align with hr */
     bottom: -100px; /* Place below hr (100px from bottom) */
-    left: -10px;
+    left: -5px;
     z-index: 11; /* Keep above hr and other elements */
     border: 3px solid rgb(255, 255, 255);
 }
