@@ -42,10 +42,10 @@ p {
     z-index: -1;
 }
 .square {
-    width: calc(30vh + 1vh);
-    height: calc(35vh + 1vh);
+    width: calc(25vh + 1vh);
+    height: calc(30vh + 1vh);
     background-color: #ffffff;
-    border-radius: 50px;
+    border-radius: 40px;
     z-index: -1;
 }
 .panel {
