@@ -54,14 +54,14 @@ p {
         font-family: "Rubik Mono One", monospace;
         font-weight: 400;
         font-style: normal;
-        font-size: calc(2.5vh + 1vw);
+        font-size: calc(2.8vh + 1vw);
         text-transform: uppercase;
         padding-top: 90px;
         margin: 0;
     }  
     p {  
         color: #ffffff;  
-        font-size: calc(0.5vh + 0.8vh);  
+        font-size: calc(0.2vh + 0.8vh);  
         text-align: center; 
         font-family: "Raleway", sans-serif;
         font-optical-sizing: auto;
