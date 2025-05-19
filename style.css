@@ -33,16 +33,6 @@ p {
     font-weight: 300;
     font-style: normal; 
 }
-hr {
-    position: fixed;
-    bottom: 100px;
-    left: 0;
-    width: 100%; /* Fixed width to span the viewport */
-    border: 1px solid rgb(0, 225, 255);
-    background-color: #ffffff;
-    margin: 0;
-    z-index: 10;
-}
 .square-container {
     display: flex;
     flex-wrap: wrap;
@@ -63,7 +53,7 @@ hr {
     height: calc(20vh + 1vh);
     background-color: #000000;
     position: fixed; /* Use fixed positioning to align with hr */
-    bottom: -31px; /* Place below hr (100px from bottom) */
+    bottom: -100px; /* Place below hr (100px from bottom) */
     left: -10px;
     z-index: 11; /* Keep above hr and other elements */
     border: 3px solid rgb(255, 255, 255);
