@@ -65,10 +65,10 @@ p {
     font-family: 'Rubik Mono One', monospace;
     background: linear-gradient(135deg, #6e8efb, #a777e3);
     color: #ffffff;
-    padding: 10px 60px;
+    padding: 8px 45px;
     border: none;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -84,7 +84,7 @@ p {
     body {   
         background-color: #000000;  
         overflow-y: auto; /* Enable scrolling */
-        height: 170vh; /* Increased height for longer page */
+        height: 140vh; /* Increased height for longer page */
         margin: 0; /* Remove default margin */
         -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
     }
@@ -137,10 +137,10 @@ p {
         font-family: 'Rubik Mono One', monospace;
         background: linear-gradient(135deg, #6e8efb, #a777e3);
         color: #ffffff;
-        padding: 10px 60px;
+        padding: 8px 45px;
         border: none;
         border-radius: 8px;
-        font-size: 16px;
+        font-size: 14px;
         cursor: pointer;
         transition: all 0.3s ease;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -157,7 +157,7 @@ p {
     body {   
         background-color: #000000;  
         overflow-y: auto; /* Enable scrolling */
-        height: 300vh; /* Increased height for longer page */
+        height: 320vh; /* Increased height for longer page */
         margin: 0; /* Remove default margin */
         -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
     }
@@ -210,10 +210,10 @@ p {
         font-family: 'Rubik Mono One', monospace;
         background: linear-gradient(135deg, #6e8efb, #a777e3);
         color: #ffffff;
-        padding: 10px 60px;
+        padding: 8px 45px;
         border: none;
         border-radius: 8px;
-        font-size: 16px;
+        font-size: 14px;
         cursor: pointer;
         transition: all 0.3s ease;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
