@@ -43,10 +43,10 @@ p {
 }
 .panel {
     width: 105%;
-    height: calc(20vh + 1vh);
+    height: 20vh;
     background-color: #000000;
     position: fixed; /* Use fixed positioning to align with hr */
-    bottom: -100px; /* Place below hr (100px from bottom) */
+    bottom: -30px; /* Place below hr (100px from bottom) */
     left: -5px;
     z-index: 11; /* Keep above hr and other elements */
     border: 3px solid rgb(255, 255, 255);
