@@ -41,7 +41,6 @@ p {
     padding: 20px;
     z-index: -1;
 }
-
 .panel {
     width: 105%;
     height: calc(20vh + 1vh);
@@ -60,7 +59,6 @@ p {
     z-index: -1;
     position: relative; /* Added to establish a positioning context for the button */
 }
-
 .square button {
     font-family: 'Rubik Mono One', monospace;
     background: linear-gradient(135deg, #6e8efb, #a777e3);
@@ -79,6 +77,84 @@ p {
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust to center the button horizontally */
 }
+.square img {
+    max-width: 50%; /* Изображение не выходит за рамки */
+    height: auto; /* Сохранение пропорций */
+    border-radius: 5px; /* Скругление углов изображения */
+    transform: translate(50%, 50%);
+}
+.square:nth-child(-n+4) img {
+    transform: translate(10%, 80%); /* Shift button slightly to the left */
+    max-width: 40%; /* Изображение не выходит за рамки */
+}
+.square p {
+    background: linear-gradient(135deg, #6e8efb, #a777e3); /* Gradient background */
+    -webkit-background-clip: text; /* Clip gradient to text */
+    -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+    text-align: center;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: calc(3.5vh + 1vw);
+    text-transform: uppercase;
+    padding-top: 2px;
+    margin: 0;
+    margin-left: 20px; /* Shift text to the right */
+}
+.square img:nth-child(4) {
+    max-width: 50%; /* Match size for consistency */
+    height: auto;
+    border-radius: 5px;
+    position: absolute; /* Position relative to .square */
+    right: -10px; /* Align close to the right edge */
+    top: 45%; /* Keep vertically centered */
+    transform: translateY(-50%); /* Center vertically */
+}
+.panel-icon {
+    max-width: 10vh;
+    height: auto;
+    position: absolute;
+    top: 20%;
+    transform: translateY(-50%);
+    cursor: pointer; /* Indicate clickability */
+}
+.panel img:nth-child(1) {
+    left: 10%;
+}
+.panel img:nth-child(2) {
+    right: 12%;
+}
+.panel img:nth-child(3) {
+    left: 42%;
+}
+.hidden {
+    display: none;
+}
+
+.cristal {
+    display: none;
+}
+.cristal img {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 2;
+}
+.cristal h1{ 
+    color: #ffffff;  
+    text-align: center;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: calc(3.5vh + 1vw);
+    text-transform: uppercase;
+    padding-top: 40vh;
+    margin: 0;
+    z-index: -1;
+}
+
 /* Desktop styles */
 @media screen and (max-width: 736px) {
     body {   
@@ -132,7 +208,6 @@ p {
         z-index: -1;
         position: relative; /* Added to establish a positioning context for the button */
     }
-    
     .square button {
         font-family: 'Rubik Mono One', monospace;
         background: linear-gradient(135deg, #6e8efb, #a777e3);
@@ -205,7 +280,6 @@ p {
         z-index: -1;
         position: relative; /* Added to establish a positioning context for the button */
     }
-    
     .square button {
         font-family: 'Rubik Mono One', monospace;
         background: linear-gradient(135deg, #6e8efb, #a777e3);
