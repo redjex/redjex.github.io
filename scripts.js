@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (window.matchMedia('(max-width: 736px)').matches) {
         initialBodyHeight = '120vh';
     } else {
-        initialBodyHeight = '140vh';
+        initialBodyHeight = '100vh';
     }
 
     // Debugging: Log if elements are found
