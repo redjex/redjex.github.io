@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Отслеживаем клики и завершенные квадраты
-    let crystalClicks = 0;
+    let crystalClicks = 100;
     let completedSquares = new Set();
 
     // Обновляем проценты для всех квадратов
@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (diamondIcon) {
         diamondIcon.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // ← поднимаем вверх
             h1.classList.add('hidden');
             p.classList.add('hidden');
             squareContainer.classList.add('hidden');
@@ -61,9 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.height = `${currentHeight}vh`;
         });
     }
-
+    
     if (peoplesIcon) {
         peoplesIcon.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // ← поднимаем вверх
             h1.classList.remove('hidden');
             p.classList.remove('hidden');
             squareContainer.classList.remove('hidden');
