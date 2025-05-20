@@ -219,7 +219,7 @@ p {
     bottom: 10px; /* Distance from the bottom of .square */
     left: 50%; /* Center horizontally */
     transform: translateX(0%); /* Adjust to center the button horizontally */
-    z-index: 2; /* Ensure button is clickable */
+    z-index: 3; /* Ensure button is clickable */
 }
 
 /* Desktop styles */
@@ -336,7 +336,7 @@ p {
         bottom: 10px; /* Distance from the bottom of .square */
         left: 50%; /* Center horizontally */
         transform: translateX(0%); /* Adjust to center the button horizontally */
-        z-index: 2; /* Ensure button is clickable */
+        z-index: 3; /* Ensure button is clickable */
     }
 }
 /* Desktop styles */
@@ -453,7 +453,7 @@ p {
         bottom: 10px; /* Distance from the bottom of .square */
         left: 50%; /* Center horizontally */
         transform: translateX(0%); /* Adjust to center the button horizontally */
-        z-index: 2; /* Ensure button is clickable */
+        z-index: 3; /* Ensure button is clickable */
     }
 }
 
