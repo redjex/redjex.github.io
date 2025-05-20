@@ -199,6 +199,28 @@ p {
     transform: translateX(0%); /* Adjust to center the button horizontally */
     z-index: 2; /* Ensure button is clickable */
 }
+.completed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rubik Mono One', monospace;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #ffffff;
+    padding: 8px 45px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: absolute; /* Position the button absolutely within .square */
+    bottom: 10px; /* Distance from the bottom of .square */
+    left: 50%; /* Center horizontally */
+    transform: translateX(0%); /* Adjust to center the button horizontally */
+    z-index: 2; /* Ensure button is clickable */
+}
 
 /* Desktop styles */
 @media screen and (max-width: 736px) {
@@ -294,6 +316,28 @@ p {
         transform: translateX(0%); /* Adjust to center the button horizontally */
         z-index: 2; /* Ensure button is clickable */
     }
+    .completed {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Rubik Mono One', monospace;
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
+        color: #ffffff;
+        padding: 8px 45px;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: absolute; /* Position the button absolutely within .square */
+        bottom: 10px; /* Distance from the bottom of .square */
+        left: 50%; /* Center horizontally */
+        transform: translateX(0%); /* Adjust to center the button horizontally */
+        z-index: 2; /* Ensure button is clickable */
+    }
 }
 /* Desktop styles */
 @media screen and (max-width: 568px) {
@@ -368,6 +412,28 @@ p {
         z-index: 2;
     }
     .claimable {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Rubik Mono One', monospace;
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
+        color: #ffffff;
+        padding: 8px 45px;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: absolute; /* Position the button absolutely within .square */
+        bottom: 10px; /* Distance from the bottom of .square */
+        left: 50%; /* Center horizontally */
+        transform: translateX(0%); /* Adjust to center the button horizontally */
+        z-index: 2; /* Ensure button is clickable */
+    }
+    .completed {
         display: flex;
         justify-content: center;
         align-items: center;
