@@ -2,7 +2,7 @@
 body {   
     background-color: #000000;
     overflow-y: auto;
-    height: 140vh;
+    height: 160vh;
     margin: 0;
     -webkit-overflow-scrolling: touch;
     touch-action: pan-y; /* Уже есть, оставляем */
@@ -43,7 +43,7 @@ p {
     justify-content: center;
     gap: 20px;
     padding: 20px;
-    z-index: -1;
+    z-index: 1;
 }
 .panel {
     width: 105%;
@@ -60,7 +60,7 @@ p {
     height: calc(30vh + 1vh);
     background-color: #ffffff;
     border-radius: 20px;
-    z-index: -1;
+    z-index: 1;
     position: relative; /* Added to establish a positioning context for the button */
 }
 .square button {
@@ -80,6 +80,7 @@ p {
     bottom: 10px; /* Distance from the bottom of .square */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust to center the button horizontally */
+    z-index: 2; /* Ensure button is clickable */
 }
 .square img {
     max-width: 50%; /* Изображение не выходит за рамки */
@@ -115,12 +116,12 @@ p {
     transform: translateY(-50%); /* Center vertically */
 }
 .panel-icon {
-    max-width: 10vh;
     height: auto;
     position: absolute;
     top: 20%;
     transform: translateY(-50%);
     cursor: pointer; /* Indicate clickability */
+    max-width: 80px;
 }
 .panel img:nth-child(1) {
     left: 10%;
@@ -140,8 +141,8 @@ p {
     font-style: normal;
     position: absolute;
     top: 23%;
-    left: 9.7%;
-    transform: translate(0%, 20%);
+    left: 10%;
+    transform: translate(-10%, 20%);
     cursor: pointer;
     z-index: 2;
     width: 100px; /* Фиксированная ширина */
@@ -219,14 +220,14 @@ p {
         justify-content: center;
         gap: 20px;
         padding: 20px;
-        z-index: -1;
+        z-index: 1;
     }
     .square {
         width: calc(25vh + 1vh);
         height: calc(30vh + 1vh);
         background-color: #ffffff;
         border-radius: 20px;
-        z-index: -1;
+        z-index: 2;
         position: relative; /* Added to establish a positioning context for the button */
     }
     .square button {
@@ -246,6 +247,7 @@ p {
         bottom: 10px; /* Distance from the bottom of .square */
         left: 50%; /* Center horizontally */
         transform: translateX(-50%); /* Adjust to center the button horizontally */
+        z-index: 2;
     }
 }
 /* Desktop styles */
@@ -291,14 +293,14 @@ p {
         justify-content: center;
         gap: 20px;
         padding: 20px;
-        z-index: -1;
+        z-index: 1;
     }
     .square {
         width: calc(20vh + 1vh);
         height: calc(25vh + 1vh);
         background-color: #ffffff;
         border-radius: 20px;
-        z-index: -1;
+        z-index: 2;
         position: relative; /* Added to establish a positioning context for the button */
     }
     .square button {
@@ -318,5 +320,20 @@ p {
         bottom: 10px; /* Distance from the bottom of .square */
         left: 50%; /* Center horizontally */
         transform: translateX(-50%); /* Adjust to center the button horizontally */
+        z-index: 2;
+    }
+}
+
+/* Для экранов меньше 560px */
+@media screen and (max-width: 559.98px) {
+    body {
+        height: 160vh;
+    }
+}
+
+/* Для экранов меньше 420px */
+@media screen and (max-width: 419.98px) {
+    body {
+        height: 280vh;
     }
 }
