@@ -11,68 +11,98 @@ document.addEventListener('DOMContentLoaded', () => {
     const cristalIcon = document.querySelector('.cristal');
     const cristalImage = document.querySelector('.cristal img');
     const cristalH1 = document.querySelector('.cristal h1');
-    const cristalp = document.querySelector('.panel p');
+    const cristalP = document.querySelector('.panel p');
 
-    // Определяем начальную высоту body в зависимости от размера экрана
-    let initialBodyHeight;
-    if (window.matchMedia('(max-width: 568px)').matches) {
-        initialBodyHeight = '320vh';
-    } else if (window.matchMedia('(max-width: 736px)').matches) {
-        initialBodyHeight = '120vh';
-    } else {
-        initialBodyHeight = '100vh';
+    // Требования по кликам для каждого квадрата
+    const clickRequirements = {
+        1: 10,
+        2: 20,
+        3: 30,
+        4: 40,
+        5: 50,
+        6: 60,
+        7: 70,
+        8: 80,
+    };
+
+    // Отслеживаем клики и завершенные квадраты
+    let crystalClicks = 0;
+    let completedSquares = new Set();
+
+    // Обновляем проценты для всех квадратов
+    function updatePercentages() {
+        Object.keys(clickRequirements).forEach(index => {
+            const buttonElement = document.querySelector(`#button-${index}`);
+            if (buttonElement && !completedSquares.has(index)) {
+                const requiredClicks = clickRequirements[index];
+                const percentage = Math.min((crystalClicks / requiredClicks) * 100, 100);
+                buttonElement.textContent = percentage >= 100 ? 'Получить' : `${Math.round(percentage)}%`;
+    
+                if (percentage >= 100) {
+                    buttonElement.classList.add('claimable');
+                    buttonElement.classList.remove('completed');
+                    buttonElement.disabled = false;
+                } else {
+                    buttonElement.classList.remove('claimable');
+                    buttonElement.disabled = true;
+                }
+            }
+        });
     }
-
-    // Debugging: Log if elements are found
-    console.log('diamondIcon:', diamondIcon);
-    console.log('peoplesIcon:', peoplesIcon);
-    console.log('cristalImage:', cristalImage);
-    console.log('cristalH1:', cristalH1);
-    console.log('initialBodyHeight:', initialBodyHeight);
 
     if (diamondIcon) {
         diamondIcon.addEventListener('click', () => {
-            console.log('Клик по Diamond');
             h1.classList.add('hidden');
             p.classList.add('hidden');
             squareContainer.classList.add('hidden');
             squares.forEach(square => square.classList.add('hidden'));
-            if (cristalIcon) {
-                cristalIcon.style.display = 'block';
-            }
-            // Уменьшаем высоту body в 2 раза
+            if (cristalIcon) cristalIcon.style.display = 'block';
             const currentHeight = parseFloat(initialBodyHeight) / 2;
             document.body.style.height = `${currentHeight}vh`;
         });
-    } else {
-        console.warn('Diamond icon not found');
     }
 
     if (peoplesIcon) {
         peoplesIcon.addEventListener('click', () => {
-            console.log('Клик по Peoples');
             h1.classList.remove('hidden');
             p.classList.remove('hidden');
             squareContainer.classList.remove('hidden');
             squares.forEach(square => square.classList.remove('hidden'));
-            if (cristalIcon) {
-                cristalIcon.style.display = 'none';
-            }
-            // Восстанавливаем исходную высоту body
+            if (cristalIcon) cristalIcon.style.display = 'none';
             document.body.style.height = initialBodyHeight;
         });
-    } else {
-        console.warn('Peoples icon not found');
     }
 
     if (cristalImage && cristalH1) {
         cristalImage.addEventListener('click', () => {
-            console.log('Клик по Crystal');
-            let currentValue = parseInt(cristalH1.textContent) || 0;
-            cristalH1.textContent = currentValue + 1;
-            cristalp.textContent = currentValue + 1;
+            crystalClicks++;
+            cristalH1.textContent = crystalClicks;
+            cristalP.textContent = crystalClicks;
+            updatePercentages();
         });
-    } else {
-        console.warn('Crystal image or h1 not found:', { cristalImage, cristalH1 });
     }
+
+    Object.keys(clickRequirements).forEach(index => {
+        const buttonElement = document.querySelector(`#button-${index}`);
+        if (buttonElement) {
+            buttonElement.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const requiredClicks = clickRequirements[index];
+                const percentage = Math.min((crystalClicks / requiredClicks) * 100, 100);
+    
+                if (!completedSquares.has(index) && percentage >= 100) {
+                    completedSquares.add(index);
+                    buttonElement.textContent = 'Пройдено';
+                    buttonElement.classList.remove('claimable');
+                    buttonElement.classList.add('completed');
+                    buttonElement.disabled = true;
+                    console.log(`Квадрат ${index} получен`);
+                }
+            });
+        }
+    });
+
+    // Инициализация процентов при загрузке
+    updatePercentages();
 });
