@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cristalIcon = document.querySelector('.cristal');
     const cristalImage = document.querySelector('.cristal img');
     const cristalH1 = document.querySelector('.cristal h1');
+    const cristalp = document.querySelector('.panel p');
 
     // Определяем начальную высоту body в зависимости от размера экрана
     let initialBodyHeight;
@@ -69,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Клик по Crystal');
             let currentValue = parseInt(cristalH1.textContent) || 0;
             cristalH1.textContent = currentValue + 1;
+            cristalp.textContent = currentValue + 1;
         });
     } else {
         console.warn('Crystal image or h1 not found:', { cristalImage, cristalH1 });
