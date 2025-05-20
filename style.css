@@ -128,11 +128,28 @@ p {
 .panel img:nth-child(2) {
     right: 12%;
 }
-.panel img:nth-child(3) {
-    left: 42%;
-}
 .hidden {
     display: none;
+}
+.panel p {
+    color: #ffffff;
+    font-size: 25px;
+    text-align: center;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    position: absolute;
+    top: 23%;
+    left: 9.7%;
+    transform: translate(0%, 20%);
+    cursor: pointer;
+    z-index: 2;
+    width: 100px; /* Фиксированная ширина */
+    min-width: 100px; /* Минимальная ширина */
+    max-width: 100px; /* Максимальная ширина */
+    white-space: nowrap; /* Предотвращает перенос текста */
+    overflow: hidden; /* Скрывает переполнение */
+    text-overflow: ellipsis; /* Добавляет многоточие при переполнении */
 }
 
 .cristal {
