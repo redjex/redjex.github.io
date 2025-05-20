@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Отслеживаем клики и завершенные квадраты
-    let crystalClicks = 100;
+    let crystalClicks = 1;
     let completedSquares = new Set();
 
     // Обновляем проценты для всех квадратов
