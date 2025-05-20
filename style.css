@@ -67,7 +67,7 @@ p {
     font-family: 'Rubik Mono One', monospace;
     background: linear-gradient(135deg, #6e8efb, #a777e3);
     color: #ffffff;
-    padding: 8px 45px;
+    padding: 8px 0; /* Только вертикальный отступ — горизонтальный регулируется через ширину */
     border: none;
     border-radius: 8px;
     font-size: 14px;
@@ -76,11 +76,11 @@ p {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
     letter-spacing: 1px;
-    position: absolute; /* Position the button absolutely within .square */
-    bottom: 10px; /* Distance from the bottom of .square */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust to center the button horizontally */
-    z-index: 2; /* Ensure button is clickable */
+    position: absolute;
+    bottom: 15px; /* Нижний отступ */
+    left: 15px;   /* Левый отступ */
+    width: calc(100% - 30px); /* Учитываем 15px слева и справа */
+    z-index: 2;
 }
 .square img {
     max-width: 50%; /* Изображение не выходит за рамки */
@@ -175,6 +175,26 @@ p {
     padding-top: 40vh;
     margin: 0;
     z-index: -1;
+}
+
+.claimable {
+    font-family: 'Rubik Mono One', monospace;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #ffffff;
+    padding: 8px 45px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: absolute; /* Position the button absolutely within .square */
+    bottom: 10px; /* Distance from the bottom of .square */
+    left: 50%; /* Center horizontally */
+    transform: translateX(0%); /* Adjust to center the button horizontally */
+    z-index: 2; /* Ensure button is clickable */
 }
 
 /* Desktop styles */
