@@ -178,6 +178,9 @@ p {
 }
 
 .claimable {
+    display: flex;
+justify-content: center;
+align-items: center;
     font-family: 'Rubik Mono One', monospace;
     background: linear-gradient(135deg, #6e8efb, #a777e3);
     color: #ffffff;
