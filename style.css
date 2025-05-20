@@ -178,6 +178,8 @@ p {
 }
 
 .claimable {
+    width: 140px; /* или подбери по вкусу */
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -200,6 +202,8 @@ p {
     z-index: 2; /* Ensure button is clickable */
 }
 .completed {
+    width: 140px; /* или подбери по вкусу */
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -295,6 +299,8 @@ p {
         z-index: 2;
     }
     .claimable {
+        width: 140px; /* или подбери по вкусу */
+        text-align: center; 
         display: flex;
         justify-content: center;
         align-items: center;
@@ -317,6 +323,8 @@ p {
         z-index: 2; /* Ensure button is clickable */
     }
     .completed {
+        width: 140px; /* или подбери по вкусу */
+        text-align: center; 
         display: flex;
         justify-content: center;
         align-items: center;
@@ -412,6 +420,8 @@ p {
         z-index: 2;
     }
     .claimable {
+        width: 140px; /* или подбери по вкусу */
+        text-align: center; 
         display: flex;
         justify-content: center;
         align-items: center;
@@ -434,6 +444,8 @@ p {
         z-index: 2; /* Ensure button is clickable */
     }
     .completed {
+        width: 140px; /* или подбери по вкусу */
+        text-align: center; 
         display: flex;
         justify-content: center;
         align-items: center;
