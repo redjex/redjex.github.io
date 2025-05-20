@@ -2,7 +2,7 @@
 body {   
     background-color: #000000;  
     overflow-y: auto; /* Enable scrolling */
-    height: 120vh; /* Increased height for longer page */
+    height: 140vh; /* Increased height for longer page */
     margin: 0; /* Remove default margin */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
 }
@@ -84,7 +84,7 @@ p {
     body {   
         background-color: #000000;  
         overflow-y: auto; /* Enable scrolling */
-        height: 140vh; /* Increased height for longer page */
+        height: 180vh; /* Increased height for longer page */
         margin: 0; /* Remove default margin */
         -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
     }
