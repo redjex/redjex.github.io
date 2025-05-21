@@ -225,6 +225,39 @@ p {
     transform: translateX(0%); /* Adjust to center the button horizontally */
     z-index: 3; /* Ensure button is clickable */
 }
+.notification-plaque {
+    position: fixed;
+    top: 20px;
+    right: -300px;
+    width: 280px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: right 0.5s ease-in-out;
+}
+
+.notification-plaque.show {
+    right: 10px;
+}
+
+.notification-image {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.notification-text {
+    color: #ffffff;
+    font-family: "Rubik Mono One", monospace;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0;
+}
 
 /* Desktop styles */
 @media screen and (max-width: 736px) {
