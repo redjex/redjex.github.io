@@ -12,22 +12,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const cristalImage = document.querySelector('.cristal img');
     const cristalH1 = document.querySelector('.cristal h1');
     const cristalP = document.querySelector('.panel p');
+    const notificationPlaque = document.querySelector('#milestone-notification');
+    const milestoneImage = document.querySelector('#milestone-image');
 
     // Требования по кликам для каждого квадрата
     const clickRequirements = {
         1: 10,
-        2: 20,
-        3: 30,
-        4: 40,
-        5: 50,
-        6: 60,
-        7: 70,
-        8: 80,
+        2: 30,
+        3: 50,
+        4: 100,
+        5: 150,
+        6: 200,
+        7: 250,
+        8: 300,
     };
 
     // Отслеживаем клики и завершенные квадраты
     let crystalClicks = 0;
     let completedSquares = new Set();
+    const initialBodyHeight = document.body.style.height;
 
     // Обновляем проценты для всех квадратов
     function updatePercentages() {
@@ -50,9 +53,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Показ уведомления при достижении milestone
+    function showMilestoneNotification() {
+        if (notificationPlaque && milestoneImage) {
+            const milestoneIndex = Object.keys(clickRequirements).find(index => clickRequirements[index] === crystalClicks);
+            if (milestoneIndex) {
+                milestoneImage.src = `img/${milestoneIndex}rank.png`;
+                notificationPlaque.classList.add('show');
+                setTimeout(() => {
+                    notificationPlaque.classList.remove('show');
+                }, 3000); // Уведомление исчезает через 3 секунды
+            }
+        }
+    }
+
     if (diamondIcon) {
         diamondIcon.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' }); // ← поднимаем вверх
+            window.scrollTo({ top: 0, behavior: 'smooth' });
             h1.classList.add('hidden');
             p.classList.add('hidden');
             squareContainer.classList.add('hidden');
@@ -65,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (peoplesIcon) {
         peoplesIcon.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' }); // ← поднимаем вверх
+            window.scrollTo({ top: 0, behavior: 'smooth' });
             h1.classList.remove('hidden');
             p.classList.remove('hidden');
             squareContainer.classList.remove('hidden');
@@ -81,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cristalH1.textContent = crystalClicks;
             cristalP.textContent = crystalClicks;
             updatePercentages();
+            showMilestoneNotification();
         });
     }
 
