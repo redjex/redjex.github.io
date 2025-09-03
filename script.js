@@ -162,5 +162,4 @@ backBtn.addEventListener("click", () => {
     textElement.classList.add("hidden");
 
     startBtn.style.display = "inline-block";
-
 });
