@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loader">
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+        <div class="fact-container" id="random-fact"></div>
+    </div>
+
+    <div id="main-content">
+        <div class="content" id="menu1" style="display: block;">
+            <h1 class="News">Новости</h1>
+            <div class="news-image-container">
+                <img class="news-image" src="news/1.png" alt="News">
+                <div class="dots-container"></div>
+            </div>
+
+            <h1 class="News second-news">Оценки за сегодня</h1>
+            <div class="cards-container">
+                <div class="card">
+                    <img class="card-image" src="img/card/rus5.png" alt="Card 1">
+                </div>
+                <div class="card">
+                    <img class="card-image" src="img/card/mat2.png" alt="Card 2">
+                </div>
+                <div class="card hidden">
+                    <img class="card-image" src="img/card/fiz3.png" alt="Card 3">
+                </div>
+                <div class="card hidden">
+                    <img class="card-image" src="img/card/rus4.png" alt="Card 4">
+                </div>
+                <div class="card hidden">
+                    <img class="card-image" src="img/card/mat5.png" alt="Card 5">
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button class="filter-button"><span class="material-icons">filter_list</span></button>
+                <button class="show-more"><span class="material-icons">expand_more</span> Узнать больше</button>
+            </div>
+
+            <h1 class="News third-news">Домашнее задание</h1>
+            <div class="homework-container">
+                <div class="homework-row">
+                    <div class="homework-subject">Математика</div>
+                    <div class="homework-task">Решить задачи 1-5 на стр. 45</div>
+                </div>
+                <div class="homework-row">
+                    <div class="homework-subject">Русский язык</div>
+                    <div class="homework-task">Упр. 123, написать сочинение</div>
+                </div>
+                <div class="homework-row">
+                    <div class="homework-subject">Физика</div>
+                    <div class="homework-task">Прочитать § 3.2, ответить на вопросы</div>
+                </div>
+                <div class="homework-row">
+                    <div class="homework-subject">История</div>
+                    <div class="homework-task">Подготовить доклад о Реформации</div>
+                </div>
+            </div>
+
+            <div class="filter-menu">
+                <div class="filter-content">
+                    <button class="filter-close"><span class="material-icons">close</span></button>
+                    <div class="filter-buttons-container">
+                        <button class="filter-option" data-sort="best">Самые хорошие</button>
+                        <button class="filter-option" data-sort="worst">Самые плохие</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content" id="menu2" style="display: none;">
+            <h1 class="News">Меню 2</h1>
+            <p>Это второе меню.</p>
+        </div>
+
+        <div class="content" id="menu3" style="display: none;">
+            <h1 class="News">Меню 3</h1>
+            <p>Это третье меню.</p>
+        </div>
+
+        <div class="control-panel">
+            <button class="menu-button" data-menu="menu1">Меню 1</button>
+            <button class="menu-button" data-menu="menu2">Меню 2</button>
+            <button class="menu-button" data-menu="menu3">Меню 3</button>
+            <div class="button-outline"></div>
+        </div>
+    </div>
+
+    <div class="profile">
+        <button class="profile-button" data-menu="menu3">Тест</button>
+    </div>
+
+    <script src="js/facts.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/button_down.js"></script>
+    <script src="js/news.js"></script>
+</body>
+</html>
