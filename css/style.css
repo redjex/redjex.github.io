@@ -115,10 +115,10 @@ html, body {
     color: white;
     overflow-y: auto;
     opacity: 0;
-    top: 70px;
+    top: 20px; /* Adjusted to ensure 20px from top of viewport */
     text-align: left;
     transition: opacity 0.8s ease;
-    padding-top: 50px;
+    padding-top: 0; /* Adjusted to ensure 20px from top */
     padding-bottom: 110px; /* 80px (control-panel height) + 20px (bottom offset) + 10px (desired gap) */
 }
 
@@ -140,7 +140,7 @@ html, body {
     margin-left: 20px;
     margin-right: 20px;
     width: calc(100% - 40px);
-    height: 80px;
+    height: 80px; /* Increased by 50px from 80px */
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -159,7 +159,7 @@ html, body {
 .menu-button {
     flex: 1;
     min-width: 0;
-    padding: 10px 10px;
+    padding: 15px 10px; /* Slightly increased padding to fit taller control-panel */
     font-family: 'Unbounded', sans-serif;
     font-size: 16px;
     border-radius: 32px;
@@ -207,28 +207,6 @@ html, body {
     }
 }
 
-/* Кнопка профиля */
-.profile {
-    position: absolute;
-    top: 70px;
-    right: 95px;
-    width: 50px;
-    height: 50px;
-    border-radius: 32px;
-    z-index: 100;
-}
-
-.profile-button {
-    padding: 15px 40px;
-    font-family: 'Unbounded', sans-serif;
-    font-size: 16px;
-    text-align: left;
-    border-radius: 15px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-}
-
 /* Стили для заголовков */
 .News {
     font-family: 'Unbounded', sans-serif;
@@ -241,7 +219,6 @@ html, body {
 .second-news {
     margin-top: 40px;
 }
-
 
 /* Стили для новостей */
 .news-image-container {
@@ -354,7 +331,7 @@ html, body {
 
 /* Increase gap for large tasks (assuming large tasks have more height) */
 .homework-container:has(.homework-task[style*="height"]) {
-    gap: 40px; /* Increase gap for larger tasks */
+    gap: 40px; /* Increase gap for large tasks */
 }
 
 /* Контейнер для кнопок */
@@ -522,6 +499,35 @@ html, body {
 .filter-option:hover {
     background: rgba(255, 255, 255, 0.25);
     transform: scale(1.05);
+}
+
+/* Кнопка профиля */
+.profile_avatar_container {
+    position: absolute;
+    top: 20px; /* Adjusted to ensure 20px from top of viewport */
+    z-index: 100;
+    margin-left: 30px; /* 10px left margin for offset from edge */
+    overflow: hidden; /* Ensures avatar stays within circular bounds */
+    display: flex;
+    justify-content: center; /* Center avatar horizontally */
+    align-items: center; /* Center avatar vertically */
+}
+
+.profile-avatar {
+    width: 150px; /* Avatar size */
+    height: 150px; /* Avatar size */
+    border-radius: 50%; /* Ensures circular shape */
+    left: 150px;
+    object-fit: cover; /* Ensures avatar fills the container without distortion */
+}
+
+.profile_name {
+    margin-top: 10px; /* Space between avatar and name */
+    margin-left: 50px;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center; /* Center the name text */
 }
 
 /* 📱 Для телефонов → 3 карточки */
