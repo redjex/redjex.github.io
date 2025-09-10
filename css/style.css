@@ -156,28 +156,48 @@ html, body {
 }
 
 /* Liquid Glass эффект для кнопок */
+/* Liquid Glass эффект для кнопок */
 .menu-button {
     flex: 1;
     min-width: 0;
+    color: white; /* Default for dark background (#171717) */
+    background: rgba(255, 255, 255, 0); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Blur effect */
+    -webkit-backdrop-filter: blur(5px); /* Safari support */
+    transition: color 0.3s ease, background 0.8s ease; /* Smooth transition for color and background */
     padding: 15px 10px; /* Slightly increased padding to fit taller control-panel */
     font-family: 'Unbounded', sans-serif;
     font-size: 16px;
     border-radius: 32px;
     cursor: pointer;
     border: none;
-    background: rgba(255, 255, 255, 0);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: background 0.8s ease;
     position: relative;
     z-index: 102;
     text-align: center;
 }
 
 .menu-button:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent hover state */
+    color: white; /* Ensure text stays white for readability */
+}
+
+/* For a white background (e.g., if control-panel or parent has white background) */
+.control-panel[data-bg="white"] .menu-button {
+    color: rgb(0, 0, 0); /* Black text for white background */
+}
+
+.control-panel[data-bg="white"] .menu-button:hover {
+    color: rgb(0, 0, 0); /* Black text on hover for white background */
+}
+
+/* For a dark background (explicit for clarity) */
+.control-panel[data-bg="dark"] .menu-button {
+    color: white; /* White text for dark background */
+}
+
+.control-panel[data-bg="dark"] .menu-button:hover {
+    color: white; /* White text on hover for dark background */
 }
 
 /* Стили для обводки */
@@ -303,6 +323,7 @@ html, body {
     border-radius: 25px;
     padding: 20px;
     position: relative; /* For full-length lines */
+    
 }
 
 .homework-row {
@@ -511,6 +532,7 @@ html, body {
     display: flex;
     justify-content: center; /* Center avatar horizontally */
     align-items: center; /* Center avatar vertically */
+    gap: 10px;
 }
 
 .profile-avatar {
@@ -523,12 +545,43 @@ html, body {
 
 .profile_name {
     margin-top: 10px; /* Space between avatar and name */
-    margin-left: 50px;
+    margin-left: 20px;
     font-family: 'Unbounded', sans-serif;
     font-size: 20px;
     color: white;
     text-align: center; /* Center the name text */
 }
+
+.settings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background-color: white;
+    width: calc(100% - 60px); /* Растягивание с учетом отступов 15px слева и справа */
+    margin: 190px 15px 0 15px; /* 180px top margin to position 10px below profile_avatar_container */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 0 15px;
+    font-size: 16px;
+    position: relative;
+    margin-left: 30px;
+    margin-right: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for both hover-in and hover-out */
+}
+
+.settings::before {
+    content: "\2699"; /* Unicode для значка шестеренки */
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.settings:hover {
+    background-color: #c4c4c4;
+    transform: scale(1.05);
+}
+
 
 /* 📱 Для телефонов → 3 карточки */
 @media (max-width: 600px) {
