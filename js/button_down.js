@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
     const showMoreButton = document.querySelector('.show-more');
     const filterButton = document.querySelector('.filter-button');
-    const filterMenu = document.querySelector('.filter-menu');
-    const filterClose = document.querySelector('.filter-close');
-    const filterOptions = document.querySelectorAll('.filter-option');
+    const gradesFilterMenu = document.querySelector('.grades-filter-menu');
+    const filterClose = document.querySelector('.grades-filter-menu .filter-close');
+    const filterOptions = document.querySelectorAll('.grades-filter-menu .filter-option');
     const cardsContainer = document.querySelector('.cards-container');
     const buttonContainer = document.querySelector('.button-container');
     const controlPanel = document.querySelector('.control-panel');
 
-    const TRANSITION_DURATION = 100; // ms — должен соответствовать CSS transition
+    const TRANSITION_DURATION = 300; // ms — должен соответствовать CSS transition
     const MOBILE_SHOW_COUNT = 3;
 
     function isMobile() { return window.innerWidth <= 600; }
@@ -16,35 +16,32 @@ document.addEventListener('DOMContentLoaded', function () {
     function adjustButtonContainerMargin() {
         const controlPanelHeight = controlPanel.getBoundingClientRect().height;
         const isExpanded = showMoreButton.classList.contains('expanded');
-        // Use 110px as default to match CSS, adjust only when expanded
-        buttonContainer.style.marginBottom = isExpanded ? `${controlPanelHeight - 20}px` : '30px'; // Increase margin slightly when expanded
+        buttonContainer.style.marginBottom = isExpanded ? `${controlPanelHeight - 20}px` : '30px';
     }
 
-    // Анимированное скрытие (после анимации ставим display:none)
+    // Анимированное скрытие
     function hideCardAnimated(card) {
         if (card.classList.contains('hidden')) return;
-        // Запускаем анимацию скрытия через вспомогательный класс
         card.classList.add('revealing');
         setTimeout(() => {
-            // После анимации прячем из layout
             card.classList.add('hidden');
             card.style.display = 'none';
             card.classList.remove('revealing');
         }, TRANSITION_DURATION);
     }
 
-    // Анимированное появление (сначала display:block, затем плавно убираем revealing)
+    // Анимированное появление
     function showCardAnimated(card) {
         if (!card.classList.contains('hidden')) return;
-        card.style.display = 'block';        // элемент должен занять место в layout
-        card.classList.remove('hidden');     // пометка, что он видимая карточка
-        card.classList.add('revealing');     // начальное состояние для анимации
+        card.style.display = 'block';
+        card.classList.remove('hidden');
+        card.classList.add('revealing');
         requestAnimationFrame(() => {
-            card.classList.remove('revealing'); // переход к видимому состоянию
+            card.classList.remove('revealing');
         });
     }
 
-    // Приведём состояние карточек в свернутое (первые MOBILE_SHOW_COUNT видны, остальные скрыты на мобильных)
+    // Инициализация карточек
     function updateHiddenStateCollapsed() {
         const cards = Array.from(cardsContainer.querySelectorAll('.card'));
         if (isMobile()) {
@@ -53,13 +50,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 else showCardAnimated(card);
             });
         } else {
-            // На десктопе показываем все
             cards.forEach(card => showCardAnimated(card));
         }
         adjustButtonContainerMargin();
     }
 
-    // Инициализация: скрываем те карточки, которые в разметке помечены как hidden
+    // Инициализация скрытых карточек
     (function initHidden() {
         const cards = Array.from(cardsContainer.querySelectorAll('.card'));
         cards.forEach(card => {
@@ -74,35 +70,33 @@ document.addEventListener('DOMContentLoaded', function () {
     showMoreButton.addEventListener('click', function () {
         const expanded = this.classList.toggle('expanded');
         if (expanded) {
-            // Показать все карточки
             const cards = Array.from(cardsContainer.querySelectorAll('.card'));
             cards.forEach(card => showCardAnimated(card));
-            buttonContainer.classList.remove('pushed-down'); // Remove pushed-down class
+            buttonContainer.classList.remove('pushed-down');
         } else {
-            // Вернуться в свернутое состояние
             updateHiddenStateCollapsed();
-            buttonContainer.classList.remove('pushed-down'); // Remove pushed-down class
+            buttonContainer.classList.remove('pushed-down');
         }
     });
 
     // Открытие/закрытие меню фильтров
     filterButton.addEventListener('click', function () {
-        filterMenu.style.display = 'flex';
-        setTimeout(() => filterMenu.classList.add('active'), 10);
+        gradesFilterMenu.style.display = 'flex';
+        setTimeout(() => gradesFilterMenu.classList.add('active'), 10);
     });
+
     filterClose.addEventListener('click', function () {
-        filterMenu.classList.remove('active');
-        setTimeout(() => { filterMenu.style.display = 'none'; }, 300);
+        gradesFilterMenu.classList.remove('active');
+        setTimeout(() => { gradesFilterMenu.style.display = 'none'; }, TRANSITION_DURATION);
     });
 
     // Обработка сортировки/фильтров
     filterOptions.forEach(option => {
         option.addEventListener('click', function () {
-            const scrollPosition = window.scrollY; // Save current scroll position
+            const scrollPosition = window.scrollY;
             const sortType = this.getAttribute('data-sort');
             const cards = Array.from(document.querySelectorAll('.card'));
 
-            // Сортируем по цифре в имени картинки (например rus5.png -> 5)
             cards.sort((a, b) => {
                 const aMatch = a.querySelector('.card-image').src.match(/(\d+)\.png$/);
                 const bMatch = b.querySelector('.card-image').src.match(/(\d+)\.png$/);
@@ -111,11 +105,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 return sortType === 'best' ? bGrade - aGrade : aGrade - bGrade;
             });
 
-            // Перенаполняем контейнер в новом порядке
             cardsContainer.innerHTML = '';
             cards.forEach(card => cardsContainer.appendChild(card));
 
-            // Применяем видимость в зависимости от состояния кнопки "Узнать больше"
             const isExpanded = showMoreButton.classList.contains('expanded');
             const newCards = Array.from(cardsContainer.querySelectorAll('.card'));
             if (isExpanded) {
@@ -131,14 +123,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }
 
-            // Adjust margin and restore scroll position
             adjustButtonContainerMargin();
-            // Закрываем меню фильтров
-            filterMenu.classList.remove('active');
+            gradesFilterMenu.classList.remove('active');
             setTimeout(() => {
-                filterMenu.style.display = 'none';
-                window.scrollTo(0, scrollPosition); // Restore scroll position
-            }, 300);
+                gradesFilterMenu.style.display = 'none';
+                window.scrollTo(0, scrollPosition);
+            }, TRANSITION_DURATION);
         });
     });
 });

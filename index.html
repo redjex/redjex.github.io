@@ -71,14 +71,9 @@
                 </div>
             </div>
 
-            <div class="filter-menu">
-                <div class="filter-content">
-                    <button class="filter-close"><span class="material-icons">close</span></button>
-                    <div class="filter-buttons-container">
-                        <button class="filter-option" data-sort="best">Самые хорошие</button>
-                        <button class="filter-option" data-sort="worst">Самые плохие</button>
-                    </div>
-                </div>
+            <h1 class="News fourth-news">Актуальное расписание<span class="schedule-class"></span></h1>
+            <div class="schedule-container">
+                <div class="no-class-message">Выберите свой класс в меню 3 — настройки — класс</div>
             </div>
         </div>
 
@@ -101,6 +96,25 @@
             <button class="menu-button" data-menu="menu3">Меню 3</button>
             <div class="button-outline"></div>
         </div>
+
+        <div class="filter-menu">
+            <div class="filter-content">
+                <button class="filter-close"><span class="material-icons">close</span></button>
+                <div class="filter-buttons-container">
+                    <!-- Кнопки классов будут добавлены динамически через JS -->
+                </div>
+            </div>
+        </div>
+
+        <div class="grades-filter-menu">
+            <div class="filter-content">
+                <button class="filter-close"><span class="material-icons">close</span></button>
+                <div class="filter-buttons-container">
+                    <button class="filter-option" data-sort="best">Самые хорошие</button>
+                    <button class="filter-option" data-sort="worst">Самые плохие</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="js/facts.js"></script>
@@ -110,5 +124,6 @@
     <script src="js/button_down.js"></script>
     <script src="js/news.js"></script>
     <script src="js/color_theme.js"></script>
+    <script src="js/filter_class.js"></script>
 </body>
 </html>
