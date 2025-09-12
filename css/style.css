@@ -459,6 +459,8 @@ html, body {
 }
 
 .settings {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -475,19 +477,16 @@ html, body {
     margin-left: 30px;
     margin-right: 30px;
     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for both hover-in and hover-out */
-}
-
-.settings::before {
-    content: "\2699"; /* Unicode для значка шестеренки */
-    margin-right: 8px;
-    font-size: 18px;
+    gap: 15px;
 }
 
 .settings:hover {
     background-color: #c4c4c4;
     transform: scale(1.05);
 }
-
+.material-icons {
+    font-size: 16px; /* Размер иконки */
+}
 
 /* 📱 Для телефонов → 3 карточки */
 @media (max-width: 600px) {
