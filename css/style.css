@@ -387,9 +387,10 @@ html, body {
     transform: scale(1.05);
 }
 
+/* Подтверждаем белый цвет для иконок в фильтрах и кнопке Узнать больше */
 .filter-button .material-icons {
     font-size: 24px;
-    color: white; /* Явно задаем белый цвет для иконки */
+    color: rgb(255, 255, 255); /* Белый цвет для иконки */
 }
 
 .show-more {
@@ -415,8 +416,8 @@ html, body {
 
 .show-more .material-icons {
     font-size: 24px;
+    color: rgb(255, 255, 255); /* Белый цвет для иконки */
     transition: transform 0.3s ease;
-    color: white;
 }
 
 .show-more.expanded .material-icons {
@@ -487,10 +488,54 @@ html, body {
     background-color: #c4c4c4;
     transform: scale(1.05);
 }
-.material-icons {
-    font-size: 16px; /* Размер иконки */
-    color: black;
+
+/* Удаляем дублирующий стиль .material-settings и общий .material-icons */
+.settings .material-icons {
+    font-size: 25px; /* Размер иконки */
+    color: rgb(0, 0, 0); /* Черный цвет для иконки в Настройках */
 }
+
+.help_me {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    color: black;
+    background-color: white;
+    width: calc(100% - 60px); /* Растягивание с учетом отступов 15px слева и справа */
+    margin: 15px 15px 0 15px; /* 180px top margin to position 10px below profile_avatar_container */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 0 15px;
+    font-size: 16px;
+    position: relative;
+    margin-left: 30px;
+    margin-right: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for both hover-in and hover-out */
+    gap: 15px;
+}
+
+.help_me:hover {
+    background-color: #c4c4c4;
+    transform: scale(1.05);
+}
+
+.help_me .material-symbols-outlined {
+    font-size: 25px; /* Размер иконки */
+    color: black; /* Черный цвет для заполнения иконки */
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 1, /* Полное заполнение иконки */
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
 
 /* 📱 Для телефонов → 3 карточки */
 @media (max-width: 600px) {
