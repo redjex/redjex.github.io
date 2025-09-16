@@ -465,6 +465,7 @@ html, body {
     align-items: center;
     justify-content: center;
     height: 50px;
+    color: black;
     background-color: white;
     width: calc(100% - 60px); /* Растягивание с учетом отступов 15px слева и справа */
     margin: 190px 15px 0 15px; /* 180px top margin to position 10px below profile_avatar_container */
@@ -486,6 +487,7 @@ html, body {
 }
 .material-icons {
     font-size: 16px; /* Размер иконки */
+    color: black;
 }
 
 /* 📱 Для телефонов → 3 карточки */
