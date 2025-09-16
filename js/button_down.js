@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function adjustButtonContainerMargin() {
         const controlPanelHeight = controlPanel.getBoundingClientRect().height;
         const isExpanded = showMoreButton.classList.contains('expanded');
-        buttonContainer.style.marginBottom = isExpanded ? `${controlPanelHeight - 20}px` : '30px';
+        buttonContainer.style.marginBottom = isExpanded ? `${controlPanelHeight - 10}px` : '30px';
     }
 
     // Анимированное скрытие
