@@ -432,7 +432,7 @@ html, body {
 /* Кнопка профиля */
 .profile_avatar_container {
     position: absolute;
-    top: 20px; /* Adjusted to ensure 20px from top of viewport */
+    top: 30px; /* Adjusted to ensure 20px from top of viewport */
     z-index: 100;
     margin-left: 30px; /* 10px left margin for offset from edge */
     overflow: hidden; /* Ensures avatar stays within circular bounds */
@@ -443,16 +443,17 @@ html, body {
 }
 
 .profile-avatar {
-    width: 150px; /* Avatar size */
-    height: 150px; /* Avatar size */
+    width: 100px; /* Avatar size */
+    height: 100px; /* Avatar size */
     border-radius: 50%; /* Ensures circular shape */
     left: 150px;
+    top: 50px;
     object-fit: cover; /* Ensures avatar fills the container without distortion */
 }
 
 .profile_name {
-    margin-top: 10px; /* Space between avatar and name */
-    margin-left: 20px;
+    margin-top: 0px; /* Space between avatar and name */
+    margin-left: 0px;
     font-family: 'Unbounded', sans-serif;
     font-size: 20px;
     color: white;
@@ -471,6 +472,7 @@ html, body {
     width: calc(100% - 60px); /* Растягивание с учетом отступов 15px слева и справа */
     margin: 190px 15px 0 15px; /* 180px top margin to position 10px below profile_avatar_container */
     border: none;
+    top: -40px;
     border-radius: 25px;
     cursor: pointer;
     padding: 0 15px;
@@ -505,6 +507,7 @@ html, body {
     width: calc(100% - 60px); /* Растягивание с учетом отступов 15px слева и справа */
     margin: 15px 15px 0 15px; /* 180px top margin to position 10px below profile_avatar_container */
     border: none;
+    top: -40px;
     border-radius: 25px;
     cursor: pointer;
     padding: 0 15px;
