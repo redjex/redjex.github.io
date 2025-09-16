@@ -389,6 +389,7 @@ html, body {
 
 .filter-button .material-icons {
     font-size: 24px;
+    color: white; /* Явно задаем белый цвет для иконки */
 }
 
 .show-more {
@@ -415,6 +416,7 @@ html, body {
 .show-more .material-icons {
     font-size: 24px;
     transition: transform 0.3s ease;
+    color: white;
 }
 
 .show-more.expanded .material-icons {
