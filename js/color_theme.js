@@ -1,4 +1,3 @@
-// Utility function to debounce a callback
 function debounce(func, wait) {
     let timeout;
     return function (...args) {
@@ -22,18 +21,15 @@ function getElementUnderControlPanel() {
             return document.body;
         }
 
-        // Get the bounding rectangle of the control-panel
         const rect = controlPanel.getBoundingClientRect();
         const x = rect.left + rect.width / 2;
         const y = rect.top + rect.height / 2;
 
-        // Check if coordinates are valid
         if (x < 0 || y < 0 || x > window.innerWidth || y > window.innerHeight) {
             console.warn('Invalid coordinates for elementFromPoint:', { x, y });
             return document.body;
         }
 
-        // Temporarily hide control-panel to get the element underneath
         const originalVisibility = controlPanel.style.visibility;
         controlPanel.style.visibility = 'hidden';
         const elementUnder = document.elementFromPoint(x, y) || document.body;
@@ -54,34 +50,30 @@ function isLightBackground(element) {
             return false;
         }
 
-        // Get computed style of the element
         let currentElement = element;
         let bgColor = window.getComputedStyle(currentElement).backgroundColor;
 
-        // Traverse up the DOM until a non-transparent background is found
         while (currentElement && (bgColor === 'rgba(0, 0, 0, 0)' || bgColor === 'transparent')) {
             currentElement = currentElement.parentElement || document.body;
             bgColor = window.getComputedStyle(currentElement).backgroundColor;
         }
 
-        // Convert background color to RGB values
         const rgb = bgColor.match(/\d+/g);
         if (!rgb) {
             console.warn('Unable to parse background color:', bgColor);
-            return false; // Default to dark
+            return false;
         }
 
         const [r, g, b] = rgb.map(Number);
-        // Calculate luminance (perceived brightness)
         const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-        return luminance > 0.5; // Light if luminance > 0.5, dark otherwise
+        return luminance > 0.5;
     } catch (error) {
         console.error('Error in isLightBackground:', error);
-        return false; // Default to dark to avoid crashes
+        return false;
     }
 }
 
-// Function to update text color based on background
+// Function to update control panel based on background
 function updateControlPanelTextColor() {
     try {
         const controlPanel = document.querySelector('.control-panel');
@@ -90,11 +82,28 @@ function updateControlPanelTextColor() {
             return;
         }
 
-        // Get the element under the control-panel
         const elementUnder = getElementUnderControlPanel();
-        // Check if the background is light or dark
         const isLight = isLightBackground(elementUnder);
         controlPanel.setAttribute('data-bg', isLight ? 'white' : 'dark');
+
+        // Update image sources based on background
+        const buttons = document.querySelectorAll('.menu-button');
+        buttons.forEach((button, index) => {
+            const img = button.querySelector('.menu-icon');
+            if (img) {
+                if (isLight) {
+                    // Light background: use original images
+                    if (index === 0) img.src = 'img/home.png';
+                    if (index === 1) img.src = 'img/+5.png';
+                    if (index === 2) img.src = 'img/user.png';
+                } else {
+                    // Dark background: use alternate images
+                    if (index === 0) img.src = 'img/home1.png';
+                    if (index === 1) img.src = 'img/+5_1.png';
+                    if (index === 2) img.src = 'img/user1.png';
+                }
+            }
+        });
     } catch (error) {
         console.error('Error in updateControlPanelTextColor:', error);
     }
@@ -112,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Update on scroll (debounced to run at most every 3 seconds)
+// Update on scroll
 window.addEventListener('scroll', debouncedUpdateControlPanelTextColor);
 
 // Observe changes to the control-panel's style or class

@@ -173,11 +173,44 @@ html, body {
     position: relative;
     z-index: 102;
     text-align: center;
+    display: flex; /* Добавлено для центрирования */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
 }
 
 .menu-button:hover {
     background: rgba(255, 255, 255, 0.3); /* Semi-transparent hover state */
     color: white; /* Ensure text stays white for readability */
+}
+
+.menu-button img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.button-outline {
+    position: absolute;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+/* Уникальные размеры для каждой иконки */
+.menu-button[data-menu="menu1"] img {
+    width: 48px;
+    height: 48px;
+}
+
+.menu-button[data-menu="menu2"] img {
+    width: 40px;
+    height: 40px;
+}
+
+.menu-button[data-menu="menu3"] img {
+    width: 40px;
+    height: 40px;
 }
 
 /* For a white background (e.g., if control-panel or parent has white background) */
@@ -455,7 +488,7 @@ html, body {
     margin-top: 0px; /* Space between avatar and name */
     margin-left: 0px;
     font-family: 'Unbounded', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     color: white;
     text-align: center; /* Center the name text */
 }
