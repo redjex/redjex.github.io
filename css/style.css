@@ -315,11 +315,11 @@ html, body {
 .homework-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 30px; /* Base gap set to 30px */
+    gap: 10px; /* Base gap set to 30px */
     margin: 20px;
     background: rgb(255, 255, 255);
     border-radius: 25px;
-    padding: 20px;
+    padding: 10px;
     position: relative; /* For full-length lines */
     
 }
