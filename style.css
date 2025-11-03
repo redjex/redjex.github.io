@@ -29,6 +29,8 @@ body.has-results {
     background: white;
     border-radius: 20px;
     padding: 40px;
+    padding-bottom: 50px;
+    padding-top: 80px;
     max-width: 800px;
     width: 100%;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -213,7 +215,7 @@ h1 {
     font-weight: bold;
     cursor: pointer;
     display: block;
-    margin: 30px auto 20px;
+    margin: 50px auto 0;
     transition: none;
 }
 
@@ -272,28 +274,50 @@ h1 {
     }
 }
 
+.aether-logo {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    width: 150px;            /* размер логотипа */
+    height: auto;
+    z-index: 10;            /* поверх всего */
+    pointer-events: none;   /* чтобы не мешал кликам */
+}
+
 .footer-btn {
     background: #ffffff;
     color: black;
     border: 3px solid #000000;
-    padding: 15px 60px;
+    padding: 10px 30px;
     border-radius: 30px;
     font-size: 1.1em;
     font-weight: bold;
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
-    margin: 40px auto;
     transition: none;
     position: relative;
     z-index: 1;
+    text-decoration: none;
+
+    /* Ключевые изменения */
+    min-width: 100px;
+    width: fit-content;
+    box-sizing: border-box;
+
+    /* Центрирование */
+    display: flex;           /* меняем на flex (блочный) */
+    margin: 50px auto 0;     /* auto по горизонтали = центрирование */
+    max-width: 300px;        /* опционально: ограничить максимум */
 }
 
-.footer-btn:hover {
-    background: #f0f0f0;
-    border: 3px solid #000000;
+/* Родительский контейнер (рекомендуется) */
+.footer-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 .footer-btn-icon {
